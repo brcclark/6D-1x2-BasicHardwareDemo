@@ -1,0 +1,4 @@
+VAR
+	state : UnloadStationStateEnum;
+	UnloadStationFbs : UnloadStationFbTyp;
+END_VAR

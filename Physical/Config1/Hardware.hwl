@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BR.AS.HardwareTopology Version="0.0.0.1">
+  <TimeStamps>
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/10/2020 13:01:11" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="5APC3100_KBU3_000" Type="5APC3100.KBU3-000" X="115" Y="100" />
+    <Module Name="5AC901.IPLK-00" Type="5AC901.IPLK-00" X="120.8" Y="123" />
+    <Module Name="gSeg_1" Type="8F1I01.AA66.xxxx-1" X="460" Y="391" />
+    <Module Name="gSeg_14" Type="8F1I01.AA66.xxxx-1" X="723" Y="391" />
+    <Module Name="gSeg_2" Type="8F1I01.AB2B.xxxx-1" X="281" Y="381" />
+    <Module Name="gSeg_3" Type="8F1I01.BB4B.xxxx-1" X="208" Y="327" RotationAngle="45" />
+    <Module Name="gSeg_4" Type="8F1I01.BB4B.xxxx-1" X="203" Y="265" RotationAngle="90" />
+    <Module Name="gSeg_5" Type="8F1I01.BB4B.xxxx-1" X="206" Y="192" RotationAngle="135" />
+    <Module Name="gSeg_6" Type="8F1I01.BA2B.xxxx-1" X="280" Y="184" RotationAngle="180" />
+    <Module Name="gSeg_7" Type="8F1I01.AA66.xxxx-1" X="460" Y="184" RotationAngle="180" />
+    <Module Name="gSeg_8" Type="8F1I01.AA66.xxxx-1" X="723" Y="184" RotationAngle="180" />
+    <Module Name="gSeg_9" Type="8F1I01.AB2B.xxxx-1" X="986" Y="184" RotationAngle="180" />
+    <Module Name="gSeg_13" Type="8F1I01.BA2B.xxxx-1" X="986" Y="381" />
+    <Module Name="gSeg_10" Type="8F1I01.BB4B.xxxx-1" X="1135" Y="192" RotationAngle="225" Flipped="true" />
+    <Module Name="gSeg_11" Type="8F1I01.BB4B.xxxx-1" X="1188.5" Y="265" RotationAngle="270" />
+    <Module Name="gSeg_12" Type="8F1I01.BB4B.xxxx-1" X="1134" Y="328" RotationAngle="315" />
+    <Module Name="8EI8X8MWT10.xxxx-1" Type="8EI8X8MWT10.xxxx-1" X="608.800049" Y="474.1" />
+  </Modules>
+  <Links>
+    <Link From="5AC901.IPLK-00" To="gSeg_1" FromPort="IF1" ToPort="PLK3" IsRoutedByUser="False">
+      <Point X="161.8" Y="131" />
+      <Point X="161.8" Y="131" />
+      <Point X="168.8" Y="131" />
+      <Point X="591.6" Y="131" />
+      <Point X="591.6" Y="390.6" />
+      <Point X="591.6" Y="396.6" />
+      <Point X="591.6" Y="396.6" />
+    </Link>
+    <Link From="gSeg_1" To="gSeg_2" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="562.4" Y="396.6" />
+      <Point X="562.4" Y="396.6" />
+      <Point X="562.4" Y="390.6" />
+      <Point X="562.4" Y="375" />
+      <Point X="408.799927" Y="375" />
+      <Point X="408.799927" Y="380.400024" />
+      <Point X="408.799927" Y="393.400024" />
+      <Point X="408.799927" Y="393.400024" />
+    </Link>
+    <Link From="gSeg_10" To="gSeg_9" FromPort="PLK1" ToPort="PLK2" IsRoutedByUser="False">
+      <Point X="1095.4" Y="231" />
+      <Point X="1095.4" Y="231" />
+      <Point X="1095.4" Y="241" />
+      <Point X="1095.4" Y="305" />
+      <Point X="1177.9" Y="305" />
+      <Point X="1177.9" Y="295" />
+      <Point X="1177.9" Y="267" />
+      <Point X="1177.9" Y="267" />
+    </Link>
+    <Link From="gSeg_10" To="gSeg_11" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="1162" Y="251" />
+      <Point X="1162" Y="251" />
+      <Point X="1134" Y="251" />
+      <Point X="1125" Y="251" />
+      <Point X="1125" Y="315" />
+      <Point X="1184.9" Y="315" />
+      <Point X="1184.9" Y="301" />
+      <Point X="1187" Y="301" />
+      <Point X="1192" Y="301" />
+      <Point X="1192" Y="301" />
+    </Link>
+    <Link From="gSeg_11" To="gSeg_12" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="1192.20007" Y="322.500031" />
+      <Point X="1192.20007" Y="322.500031" />
+      <Point X="1187.20007" Y="322.500031" />
+      <Point X="1176.20007" Y="322.500031" />
+      <Point X="1176.20007" Y="327.2" />
+      <Point X="1176.20007" Y="355.2" />
+      <Point X="1176.20007" Y="355.2" />
+    </Link>
+    <Link From="gSeg_12" To="gSeg_13" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="1161.20007" Y="371.2" />
+      <Point X="1161.20007" Y="371.2" />
+      <Point X="1133.20007" Y="371.2" />
+      <Point X="1096" Y="371.2" />
+      <Point X="1096" Y="380" />
+      <Point X="1096" Y="389" />
+      <Point X="1096" Y="389" />
+    </Link>
+    <Link From="gSeg_13" To="gSeg_14" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="1038" Y="393.400024" />
+      <Point X="1038" Y="393.400024" />
+      <Point X="1038" Y="380.400024" />
+      <Point X="1038" Y="375" />
+      <Point X="884.399963" Y="375" />
+      <Point X="884.399963" Y="390.599976" />
+      <Point X="884.399963" Y="396.599976" />
+      <Point X="884.399963" Y="396.599976" />
+    </Link>
+    <Link From="gSeg_2" To="gSeg_3" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="350.3999" Y="389.400024" />
+      <Point X="350.3999" Y="389.400024" />
+      <Point X="350.3999" Y="380.400024" />
+      <Point X="350.3999" Y="369.300018" />
+      <Point X="311.9" Y="369.300018" />
+      <Point X="283.9" Y="369.300018" />
+      <Point X="283.9" Y="369.300018" />
+    </Link>
+    <Link From="gSeg_3" To="gSeg_4" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="267.9" Y="354.300018" />
+      <Point X="267.9" Y="354.300018" />
+      <Point X="267.9" Y="326.300018" />
+      <Point X="267.9" Y="321" />
+      <Point X="257.9" Y="321" />
+      <Point X="252.9" Y="321" />
+      <Point X="252.9" Y="321" />
+    </Link>
+    <Link From="gSeg_4" To="gSeg_5" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="252.9" Y="300" />
+      <Point X="252.9" Y="300" />
+      <Point X="257.9" Y="300" />
+      <Point X="266.9" Y="300" />
+      <Point X="266.9" Y="296" />
+      <Point X="266.9" Y="268" />
+      <Point X="266.9" Y="268" />
+    </Link>
+    <Link From="gSeg_5" To="gSeg_6" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="281.9" Y="251.999985" />
+      <Point X="281.9" Y="251.999985" />
+      <Point X="309.9" Y="251.999985" />
+      <Point X="349.9" Y="251.999985" />
+      <Point X="349.9" Y="241" />
+      <Point X="349.9" Y="232" />
+      <Point X="349.9" Y="232" />
+    </Link>
+    <Link From="gSeg_6" To="gSeg_7" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="406.9" Y="227" />
+      <Point X="406.9" Y="227" />
+      <Point X="406.9" Y="241" />
+      <Point X="406.9" Y="255" />
+      <Point X="562.5" Y="255" />
+      <Point X="562.5" Y="231" />
+      <Point X="562.5" Y="224" />
+      <Point X="562.5" Y="224" />
+    </Link>
+    <Link From="gSeg_7" To="gSeg_8" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="620.5" Y="224" />
+      <Point X="620.5" Y="224" />
+      <Point X="620.5" Y="231" />
+      <Point X="620.5" Y="245" />
+      <Point X="825.7" Y="245" />
+      <Point X="825.7" Y="231" />
+      <Point X="825.7" Y="224" />
+      <Point X="825.7" Y="224" />
+    </Link>
+    <Link From="gSeg_8" To="gSeg_9" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="883.7" Y="224" />
+      <Point X="883.7" Y="224" />
+      <Point X="883.7" Y="231" />
+      <Point X="883.7" Y="255" />
+      <Point X="1038.4" Y="255" />
+      <Point X="1038.4" Y="241" />
+      <Point X="1038.4" Y="227" />
+      <Point X="1038.4" Y="227" />
+    </Link>
+    <Link From="8EI8X8MWT10.xxxx-1" To="gSeg_14" FromPort="PLK1" ToPort="PLK3" IsRoutedByUser="False">
+      <Point X="616.5" Y="484.6" />
+      <Point X="616.5" Y="484.6" />
+      <Point X="608.5" Y="484.6" />
+      <Point X="608.5" Y="390.6" />
+      <Point X="854.6" Y="390.6" />
+      <Point X="854.6" Y="396.6" />
+      <Point X="854.6" Y="396.6" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

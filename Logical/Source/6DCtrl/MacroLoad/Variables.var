@@ -1,0 +1,4 @@
+VAR
+	state : MacroLoadStateEnum; (*state of the Macro Load process*)
+	MacroFbs : MacroLoadFbsTyp; (*Function blocks for the macro load process*)
+END_VAR

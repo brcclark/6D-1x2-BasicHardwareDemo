@@ -1,0 +1,5 @@
+VAR
+	FBin : ARRAY[0..199] OF UINT; (*Input IO Map for 6D Controller*)
+	FBout : ARRAY[0..199] OF UINT; (*Output IO Map for 6D Controller*)
+	gMcAcp6DController : McAcp6DControllerType; (*6D address link for 6D library*)
+END_VAR

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Element ID="Feature_Programs" Type="axesgroupfeature">
+    <Selector ID="Type" Value="Program">
+      <Selector ID="ModalDataBehaviour" Value="UseAxesGroupSettings" />
+      <Group ID="InitialSettings">
+        <Selector ID="InterpolationTypes" Value="LinearRapid" />
+        <Selector ID="PositionCoordinates" Value="Absolute" />
+        <Selector ID="CircleCoordinates" Value="Relative" />
+        <Selector ID="JACS_ACSProgramming" Value="JACS" />
+        <Selector ID="ContourConnection" Value="Inactive" />
+        <Selector ID="ProgrammingUnits" Value="UseAxesGroupSettings" />
+        <Group ID="Feedrates">
+          <Selector ID="FeedCharacteristic" Value="StandardCharacteristic" />
+          <Selector ID="FeedType" Value="Feedrate" />
+          <Selector ID="FeedReduction" Value="Inactive" />
+          <Property ID="FeedrateValue" Value="0.0" />
+          <Property ID="InverseFeedrateValue" Value="0.0" />
+          <Property ID="FeedratePerRevValue" Value="0.0" />
+        </Group>
+      </Group>
+      <Selector ID="DefaultLanguage" Value="BRGCode" />
+      <Selector ID="Location" Value="Default">
+        <Property ID="FileDevice" Value="CNC_PrgDir" />
+      </Selector>
+    </Selector>
+  </Element>
+  <Element ID="Feature_Jogging" Type="axesgroupfeature">
+    <Selector ID="Type" Value="Jogging" />
+  </Element>
+  <Element ID="Feature_Frames" Type="axesgroupfeature">
+    <Selector ID="Type" Value="FrameHierarchy">
+      <Selector ID="ModalDataBehaviour" Value="UseAxesGroupSettings" />
+      <Selector ID="FrameHierarchy" Value="Custom">
+        <Group ID="FramePropertyMapping">
+          <Property ID="BCS" Value="RobotBase" />
+          <Property ID="PCS" Value="RobotBase" />
+          <Property ID="SCS1" Value="" />
+          <Property ID="SCS2" />
+          <Property ID="SCS3" />
+          <Property ID="SCS4" />
+          <Property ID="SCS5" />
+        </Group>
+        <Group ID="MCS">
+          <Group ID="Frame[1]">
+            <Property ID="Name" Value="RobotBase" />
+            <Selector ID="Type" Value="StandardFrame">
+              <Group ID="Translation">
+                <Property ID="X" Value="0.0" />
+                <Property ID="Y" Value="0.0" />
+                <Property ID="Z" Value="1600" />
+              </Group>
+              <Group ID="Orientation">
+                <Property ID="Angle1" Value="0.0" />
+                <Property ID="Angle2" Value="0.0" />
+                <Property ID="Angle3" Value="0.0" />
+              </Group>
+            </Selector>
+          </Group>
+          <Group ID="Frame[2]">
+            <Property ID="Name" Value="TrakSync" />
+            <Selector ID="Type" Value="StandardFrame">
+              <Group ID="Translation">
+                <Property ID="X" Value="330" />
+                <Property ID="Y" Value="0.0" />
+                <Property ID="Z" Value="292.5" />
+              </Group>
+              <Group ID="Orientation">
+                <Property ID="Angle1" Value="0.0" />
+                <Property ID="Angle2" Value="0.0" />
+                <Property ID="Angle3" Value="180.0" />
+              </Group>
+            </Selector>
+          </Group>
+        </Group>
+      </Selector>
+    </Selector>
+  </Element>
+</Configuration>

@@ -1,0 +1,4 @@
+VAR
+	state : TampStationStateEnum;
+	TampStationFbs : TampStationFbTyp;
+END_VAR

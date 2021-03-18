@@ -1,0 +1,4 @@
+VAR
+	i : USINT; (*Loop index*)
+	state : MainStatesEnum; (*State of system*)
+END_VAR

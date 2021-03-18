@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="cntMain_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gRobotIf.Cmds.Admin.Power" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbRobotPower" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::RbtHandler:RoboBasicFb.Error" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbErrorPresent" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::RbtHandler:RoboBasicFb.ErrorReset" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbErrorReset" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::RbtHandler:RoboBasicFb.MoveProgram" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbMoveProgram" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::RbtHandler:deltaPars.ProgramName" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tiProgramName" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTrakIf.Cmds.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbPowerSystem" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSyncIf.Status.UnsyncReady" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbErrorPresent1" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSyncIf.Status.SyncReady" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbSyncReady" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gRobotIf.Status.AtSync" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbRobotAtSync" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::SyncHandle:syncEndFb.ReleaseOk" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbReleaseUnSync" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::SyncHandle:syncStartFb.ReleaseOk" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbReleaseSync" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gRobotIf.Cmds.Process.Sync" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tSync" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSceneViewerIf.Cmds.Clear" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="MomentaryPushButton1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gSceneViewerIf.Cmds.Record" attribute="value" samplingRate="slow" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbRecordPath" attribute="value" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gRobotIf.Status.Synced" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbRobotSynced" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gRobotIf.Cmds.Process.UnSync" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbDesync" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPickPlaceIf.Config.PickLoc.X" attribute="node" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="niPickLocX" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPickPlaceIf.Config.PickLoc.Z" attribute="node" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="niPickLocZ" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPickPlaceIf.Config.PickLoc.Y" attribute="node" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="niPickLocY" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPickPlaceIf.Config.PlaceLoc.Y" attribute="node" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="niPlaceLocY" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPickPlaceIf.Config.PlaceLoc.Z" attribute="node" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="niPlaceLocZ" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gPickPlaceIf.Config.PlaceLoc.X" attribute="node" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="niPlaceLocX" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gRobotIf.Cmds.Process.Run" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbRun" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

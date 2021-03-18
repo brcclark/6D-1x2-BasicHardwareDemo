@@ -1,0 +1,4 @@
+VAR
+	state : PrintStationStateEnum;
+	PrintStationFbs : PrintStationFbTyp;
+END_VAR

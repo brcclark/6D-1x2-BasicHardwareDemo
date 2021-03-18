@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="cntMain" height="850" width="600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.GroupBox" id="gbRobotControl" top="320" left="30" width="560" height="240" zIndex="0" text="Robot Control" backColor="rgba(204, 204, 204, 1)" headerBackColor="rgba(214, 214, 214, 0)" borderStyle="none" textAlign="left">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbMoveProgram" top="104" left="20" width="120" zIndex="0" text="Run Program" />
+        <Widget xsi:type="widgets.brease.TextInput" id="tiProgramName" top="144" left="20" width="180" zIndex="1" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbErrorReset" top="44" left="440" zIndex="2" text="Error Reset" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbErrorPresent" top="4" left="440" zIndex="3" text="Error" disabledCheckedBackColor="rgba(255, 0, 0, 1)" enable="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRobotPower" top="4" left="20" width="120" zIndex="4" text="Power" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRobotAtSync" top="4" left="300" zIndex="5" text="At Sync" fontSize="12px" disabledCheckedBackColor="rgba(0, 255, 0, 1)" enable="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tSync" top="84" left="290" width="120" zIndex="6" text="Sync" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRobotSynced" top="44" left="300" zIndex="7" text="In Sync" fontSize="12px" disabledCheckedBackColor="rgba(0, 255, 0, 1)" enable="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbDesync" top="124" left="290" width="120" zIndex="8" text="Desync" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRun" top="54" left="20" width="120" zIndex="9" text="Run" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox1" top="20" left="30" width="260" height="120" zIndex="1" text="System Control" headerBackColor="rgba(214, 214, 214, 0)" textAlign="left">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbPowerSystem" top="4" left="20" zIndex="0" text="Power" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.GroupBox" id="gbTrakControl" top="160" left="30" width="460" zIndex="2" text="Trak Control" headerBackColor="rgba(214, 214, 214, 0)" textAlign="left">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbErrorPresent1" top="44" left="340" zIndex="0" text="UnSync Ready" fontSize="12px" disabledCheckedBackColor="rgba(0, 255, 0, 1)" enable="false" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbSyncReady" top="4" left="340" zIndex="1" text="Sync Ready" fontSize="12px" disabledCheckedBackColor="rgba(0, 255, 0, 1)" enable="false" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbReleaseSync" top="14" left="40" width="110" zIndex="2" text="Release Sync" textColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 255, 0, 1)" fontSize="12px" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbReleaseUnSync" top="54" left="40" width="110" zIndex="3" text="Release UnSync" textColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 255, 0, 1)" fontSize="12px" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.FlyOut" id="FlyOut1" top="640" left="0" width="150" zIndex="3" buttonOffset="120" text="Scene Viewer" buttonHeight="80" buttonWidth="25" textColor="rgba(255, 255, 255, 1)" textRotation="vertical">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRecordPath" top="20" left="10" zIndex="0" text="Record Path" backColor="rgba(192, 192, 192, 1)" textColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" fontSize="12px" bold="true" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="60" left="10" zIndex="1" text="Clear" backColor="rgba(192, 192, 192, 1)" textColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" fontSize="12px" bold="true" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.GroupBox" id="gbTrakControl1" top="570" left="30" width="560" height="270" zIndex="4" text="Pick Parameters" headerBackColor="rgba(214, 214, 214, 0)" textAlign="left">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.Label" id="Label1" top="-6" left="30" zIndex="0" text="Pick Location" textColor="rgba(255, 255, 255, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label2" top="24" left="10" zIndex="1" text="X:" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niPickLocX" top="24" left="40" height="26" zIndex="2" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label3" top="54" left="10" zIndex="3" text="Y:" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niPickLocY" top="54" left="40" height="26" zIndex="4" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label4" top="84" left="10" zIndex="5" text="Z:" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niPickLocZ" top="84" left="40" height="26" zIndex="6" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label5" top="114" left="30" width="90" zIndex="7" text="Place Location" textColor="rgba(255, 255, 255, 1)" bold="true" />
+        <Widget xsi:type="widgets.brease.Label" id="Label6" top="142" left="10" zIndex="8" text="X:" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niPlaceLocX" top="144" left="40" height="26" zIndex="9" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label7" top="172" left="10" zIndex="10" text="Y:" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niPlaceLocY" top="174" left="40" height="26" zIndex="11" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label8" top="202" left="10" zIndex="12" text="Z:" textColor="rgba(255, 255, 255, 1)" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niPlaceLocZ" top="204" left="40" height="26" zIndex="13" textColor="rgba(255, 255, 255, 1)" />
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

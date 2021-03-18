@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.8.2.72?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">CfgAssbly.assembly</Object>
+    <Object Type="File">CfgShuttle.shuttlestereotype</Object>
+    <Object Type="File">CfgSector.sector</Object>
+    <Object Type="File">CfgProcPt.processpointlist</Object>
+  </Objects>
+</Package>

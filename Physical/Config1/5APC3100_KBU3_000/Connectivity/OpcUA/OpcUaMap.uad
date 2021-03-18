@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="7" ArVersion="B4.82">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gRobotIf" AutomaticEnable="True" />
+        <Variable Name="gSyncIf" AutomaticEnable="True" />
+        <Variable Name="gTrakIf" AutomaticEnable="True" />
+        <Variable Name="gSceneViewerIf" AutomaticEnable="True" />
+        <Variable Name="gPickPlaceIf" AutomaticEnable="True" />
+      </GlobalVariables>
+      <Task Name="Vis">
+        <Variable Name="Vis">
+          <Variable Name="Trak">
+            <Variable Name="Shuttle" EnableArrayElements="True" />
+          </Variable>
+        </Variable>
+      </Task>
+      <Task Name="RbtHandler">
+        <Variable Name="RoboBasicFb">
+          <Variable Name="Info">
+            <Variable Name="JointAxisPosition" EnableArrayElements="True" />
+          </Variable>
+          <Variable Name="ErrorReset" />
+          <Variable Name="Error" />
+          <Variable Name="MoveProgram" />
+        </Variable>
+        <Variable Name="deltaPars">
+          <Variable Name="ProgramName" />
+        </Variable>
+      </Task>
+      <Task Name="SyncHandle">
+        <Variable Name="syncEndFb">
+          <Variable Name="ReleaseOk" />
+        </Variable>
+        <Variable Name="syncStartFb">
+          <Variable Name="ReleaseOk" />
+        </Variable>
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

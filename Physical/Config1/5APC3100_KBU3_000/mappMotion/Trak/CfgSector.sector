@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Element ID="secStartup" Type="sector">
+    <Selector ID="Type" Value="Composed">
+      <Group ID="StartSegment">
+        <Property ID="SegmentRef" Value="::gSeg_7" />
+      </Group>
+      <Group ID="EndSegment">
+        <Property ID="SegmentRef" Value="::gSeg_8" />
+        <Property ID="PositionRelativeTo" Value="FromEnd" />
+      </Group>
+    </Selector>
+  </Element>
+  <Element ID="secSync" Type="sector">
+    <Selector ID="Type" Value="Composed">
+      <Group ID="StartSegment">
+        <Property ID="SegmentRef" Value="::gSeg_14" />
+        <Property ID="Position" Value="0.33" />
+      </Group>
+      <Group ID="EndSegment">
+        <Property ID="SegmentRef" Value="::gSeg_1" />
+        <Property ID="Position" Value="0.33" />
+      </Group>
+    </Selector>
+  </Element>
+</Configuration>

@@ -1,0 +1,5 @@
+VAR
+	Fbs : Sys6DCtrlFbTyp; (*Function Blocks to Ctrl 6D system*)
+	state : Acp6DStateEnum; (*Acp6d state*)
+	i : USINT; (*Loop index counter*)
+END_VAR

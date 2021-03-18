@@ -1,0 +1,12 @@
+VAR
+	CurrentGroup : USINT;
+	GroupRecovered : BOOL;
+	state : RecoveryStateEnum;
+	RecoverFbs : RecoveryFbs;
+END_VAR
+VAR CONSTANT
+	NUM_GROUPS : USINT := 3;
+END_VAR
+VAR
+	i : USINT;
+END_VAR

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.8.2.72?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">gAssembly_1.scn</Object>
+    <Object Type="File">gAssembly_1.svg</Object>
+    <Object Type="File">gAssembly_1.wsp</Object>
+    <Object Type="File">gAssembly_1_3d.scn</Object>
+    <Object Type="File">gAssembly_1_GuideSystem.scn</Object>
+  </Objects>
+</Package>

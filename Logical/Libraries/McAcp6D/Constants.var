@@ -1,0 +1,6 @@
+VAR CONSTANT
+	TEST : ARRAY[0..1] OF USINT := [2(0)]; (* *) (* *) (*#OMIT*)
+	mcACP6D_MACRO_PARAM_ARR : USINT := 36; (* *) (* *) (*#OMIT*)
+	mcACP6D_MACRO_CMD_NAME_ARR : USINT := 20; (* *) (* *) (*#OMIT*)
+	mcACP6D_POSITION_COVERSION_MM : REAL := 1000.0; (* *) (* *) (*#OMIT*)
+END_VAR

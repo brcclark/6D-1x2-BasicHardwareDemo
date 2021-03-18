@@ -1,0 +1,3 @@
+VAR
+	AuditCoreFb : MpAuditTrail;
+END_VAR

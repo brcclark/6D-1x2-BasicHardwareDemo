@@ -1,0 +1,859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">User/EventLog</prop>
+  </header>
+  <body>
+    <tu tuid="1625161728">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="1625292800">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}} Aborted</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}} Aborted</seg>
+      </tuv>
+    </tu>
+    <tu tuid="1625358336">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}} Finished</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}} Finished</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522240000">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}} {=$User/EventLog/Err.16384}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.16384}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248191">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}} {=$User/EventLog/Err.8193}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8193}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522256383">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.1}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.1}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248182">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8202}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8202}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522244096">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.12288}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.12288}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248183">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8201}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8201}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522255385">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.999}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.999}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248192">
+      <tuv xml:lang="de">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8192}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8192}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248190">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8194}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248189">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8195}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248188">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8196}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248187">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8197}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248186">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8198}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522248184">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.8200}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522235904">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.20480}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522235903">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.20481}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522235902">
+      <tuv xml:lang="en">
+        <seg>Command: {=$User/EventLog/CmdID.{1|u}}. Error: {=$User/EventLog/Err.20482}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522256384">
+      <tuv xml:lang="de">
+        <seg>System Error: {=$User/EventLog/SysErr.{2|u}}.  State:  {=$User/EventLog/StateErr.{3|u}}. Error Code: {1|u}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>System Error: {=$User/EventLog/SysErr.{2|u}}.  State:  {=$User/EventLog/StateErr.{3|u}}. Error Code: {1|u}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522256382">
+      <tuv xml:lang="de">
+        <seg>Segment {3|u} Error: {=$User/EventLog/SegErr.{2|u}}. Error Code: {1|u}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Segment {3|u} Error: {=$User/EventLog/SegErr.{2|u}}. Error Code: {1|u}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="-522256381">
+      <tuv xml:lang="de">
+        <seg>Shuttle {3|u} Error: {=$User/EventLog/ShErr.{2|u}}. Error Code: {1|u}</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Shuttle {3|u} Axis {=$User/EventLog/AxisErr.{4|u}} Error: {=$User/EventLog/ShErr.{2|u}}. Error Code: {1|u}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8192">
+      <tuv xml:lang="de">
+        <seg>Wrong System State</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Wrong System State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.999">
+      <tuv xml:lang="de">
+        <seg>Controller Reference</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Controller Reference</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8201">
+      <tuv xml:lang="de">
+        <seg>Timeout</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Timeout</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.12288">
+      <tuv xml:lang="de">
+        <seg>Wrong Shuttle State</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Wrong Shuttle State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8193">
+      <tuv xml:lang="de">
+        <seg>No Mastership</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>No Mastership</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.16384">
+      <tuv xml:lang="de">
+        <seg>Invalid Parameters</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Invalid Parameters</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.1">
+      <tuv xml:lang="de">
+        <seg>No License</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>System Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8202">
+      <tuv xml:lang="en">
+        <seg>No License</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8194">
+      <tuv xml:lang="en">
+        <seg>Waiting for mastership timeout</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8195">
+      <tuv xml:lang="en">
+        <seg>Wrong group state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8196">
+      <tuv xml:lang="en">
+        <seg>Wrong macro state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8197">
+      <tuv xml:lang="en">
+        <seg>Wrong IO state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8198">
+      <tuv xml:lang="en">
+        <seg>Wrong segment state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.8200">
+      <tuv xml:lang="en">
+        <seg>No routing solution found</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.20480">
+      <tuv xml:lang="en">
+        <seg>Wrong queue state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.20481">
+      <tuv xml:lang="en">
+        <seg>Wrong zone state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Err.20482">
+      <tuv xml:lang="en">
+        <seg>Shuttle on the zone boundary</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2837">
+      <tuv xml:lang="de">
+        <seg>BufferCtrl</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>BufferCtrl</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2834">
+      <tuv xml:lang="de">
+        <seg>Cam Motion</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cam Motion</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2844">
+      <tuv xml:lang="de">
+        <seg>Config Digital Input</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Config Digital Input</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2843">
+      <tuv xml:lang="de">
+        <seg>Config Digital Output</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Config Digital Output</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2828">
+      <tuv xml:lang="de">
+        <seg>Config Cyclic Channel</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Config Cyclic Channel</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2833">
+      <tuv xml:lang="de">
+        <seg>Force Mode</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Force Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2848">
+      <tuv xml:lang="de">
+        <seg>Get Payload</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Get Payload</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2842">
+      <tuv xml:lang="de">
+        <seg>Jog Axis</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Jog Axis</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2829">
+      <tuv xml:lang="de">
+        <seg>Levitation</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Levitation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2839">
+      <tuv xml:lang="de">
+        <seg>Macro Edit</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Macro Edit</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2840">
+      <tuv xml:lang="de">
+        <seg>Macro Run</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Macro Run</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2851">
+      <tuv xml:lang="de">
+        <seg>Move 6D</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move 6D</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2826">
+      <tuv xml:lang="de">
+        <seg>MoveArc</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MoveArc</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2835">
+      <tuv xml:lang="de">
+        <seg>MoveInPlanceSync</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MoveInPlanceSync</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2836">
+      <tuv xml:lang="de">
+        <seg>MoveInPlaneAsync</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MoveInPlaneAsync</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2824">
+      <tuv xml:lang="de">
+        <seg>MoveInPlane</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MoveInPlane</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2825">
+      <tuv xml:lang="de">
+        <seg>MoveShortAxis</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MoveShortAxis</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2823">
+      <tuv xml:lang="de">
+        <seg>MoveTrajectory</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>MoveTrajectory</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2849">
+      <tuv xml:lang="de">
+        <seg>Pause/Resume Shuttles</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pause/Resume Shuttles</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2847">
+      <tuv xml:lang="de">
+        <seg>Planet Ctrl</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Planet Ctrl</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2562">
+      <tuv xml:lang="de">
+        <seg>Reboot Controller</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Reboot Controller</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2582">
+      <tuv xml:lang="de">
+        <seg>Segment Get Status</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Segment Get Status</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2846">
+      <tuv xml:lang="de">
+        <seg>Shuttle Get Property</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Shuttle Get Property</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2831">
+      <tuv xml:lang="de">
+        <seg>Shuttle Get Status</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Shuttle Get Status</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2838">
+      <tuv xml:lang="de">
+        <seg>Shuttle Group</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Shuttle Group</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2845">
+      <tuv xml:lang="de">
+        <seg>Shuttle set property</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Shuttle set property</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2827">
+      <tuv xml:lang="de">
+        <seg>Stop</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stop</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2565">
+      <tuv xml:lang="de">
+        <seg>System Get Status</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>System Get Status</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2570">
+      <tuv xml:lang="de">
+        <seg>Power Off</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Power Off</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2573">
+      <tuv xml:lang="de">
+        <seg>Power Off</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Read Error Code</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2568">
+      <tuv xml:lang="de">
+        <seg>Power On</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Power On</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2841">
+      <tuv xml:lang="de">
+        <seg>Wait Until</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Wait Until</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.2830">
+      <tuv xml:lang="de">
+        <seg>Write Cyclic Channel</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Write Cyclic Channel</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.3078">
+      <tuv xml:lang="de">
+        <seg>Zone Control</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Zone Control</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.3079">
+      <tuv xml:lang="de">
+        <seg>Zone Unload</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Zone Unload</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.3080">
+      <tuv xml:lang="de">
+        <seg>Zone Clear</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Zone Clear</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CmdID.3081">
+      <tuv xml:lang="de">
+        <seg>Get Zone Status</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Get Zone Status</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SysErr.1">
+      <tuv xml:lang="de">
+        <seg>6DNet Error: No Connection</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>6DNet Error: No Connection</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SysErr.2">
+      <tuv xml:lang="de">
+        <seg>More shuttles are loaded than configured</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>More shuttles are loaded than configured</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SysErr.3">
+      <tuv xml:lang="de">
+        <seg>6DNet Error: No Connection</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Segment bootup failed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SysErr.5">
+      <tuv xml:lang="de">
+        <seg>Shuttle discovering failed</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Shuttle discovering failed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SysErr.7">
+      <tuv xml:lang="de">
+        <seg>Absolute ID scan failed</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Absolute ID scan failed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SysErr.8">
+      <tuv xml:lang="de">
+        <seg>Enable/disable segment failed</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Enable/disable segment failed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="StateErr.0">
+      <tuv xml:lang="de">
+        <seg>Error occured at any System State</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error occured at any System State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="StateErr.1">
+      <tuv xml:lang="de">
+        <seg>Activation</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Activation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="StateErr.2">
+      <tuv xml:lang="de">
+        <seg>Deactivation</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Deactivation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="StateErr.3">
+      <tuv xml:lang="de">
+        <seg> Operation Mode</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg> Operation Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="StateErr.4">
+      <tuv xml:lang="de">
+        <seg>Intelligent Operation Mode</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Intelligent Operation Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="StateErr.5">
+      <tuv xml:lang="de">
+        <seg>Trajectory Mode</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Trajectory Mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.1">
+      <tuv xml:lang="en">
+        <seg>Segment shutdown abnormally. Segment was shutdown due to another error. Additional error codes created.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.2">
+      <tuv xml:lang="en">
+        <seg>12V Power supply is off. The 12V power supply is not providing the correct voltage.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.3">
+      <tuv xml:lang="en">
+        <seg>Segment communication error. System detected an issue with the 6DNet connection. The problem is related to connection between Controller and master segment</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.4">
+      <tuv xml:lang="en">
+        <seg>Motor coil overcurrent. Motor coil current (for a single coil) reached or exceeded the safety limit defined by the system. Typically due to excessively high payloads or acceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.5">
+      <tuv xml:lang="en">
+        <seg>12V current over limit. The total current of all 4 coils reached or exceeded the safety limit defined by the system.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.6">
+      <tuv xml:lang="en">
+        <seg>24V overcurrent. 24V power supply exceeded safe current limits</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.7">
+      <tuv xml:lang="en">
+        <seg>CPU voltage 3 error. Internal system logic voltage is unstable</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.8">
+      <tuv xml:lang="en">
+        <seg>CPU voltage 2 error. Internal system logic voltage is unstable</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.9">
+      <tuv xml:lang="en">
+        <seg>CPU voltage 1 error. Internal system logic voltage is unstable</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.10">
+      <tuv xml:lang="en">
+        <seg>24V under voltage error. 24V power supply is not providing sufficient power.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.11">
+      <tuv xml:lang="en">
+        <seg>24V over voltage error. 24V power supply is unstable.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.12">
+      <tuv xml:lang="en">
+        <seg>12V under voltage error. Power consumption is too high, usually due to trajectory chosen.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.13">
+      <tuv xml:lang="en">
+        <seg>12V over voltage error. 12V power supply is too high. unstable power supply.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.14">
+      <tuv xml:lang="en">
+        <seg>CPU temperature is over 90 degrees celsius.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.15">
+      <tuv xml:lang="en">
+        <seg>Amplifier temperature is over 90 degrees celsius.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.16">
+      <tuv xml:lang="en">
+        <seg>Motor temperature is over 90 degrees celsius.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.17">
+      <tuv xml:lang="en">
+        <seg>Reference current error. The refrence current is too large, system was sshut down as a precaution.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.18">
+      <tuv xml:lang="en">
+        <seg>6DNet synchronization error. Communication is lost, either through the Controller to segment cable or through inter connecting segment cables</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.19">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.20">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.21">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.22">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.23">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.24">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.25">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.26">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.27">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SegErr.28">
+      <tuv xml:lang="en">
+        <seg>An internal voltage is not within the acceptable limits, typically due to over conservative limits.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ShErr.2">
+      <tuv xml:lang="en">
+        <seg>Shuttle feedback position error. Physical limit for positioning error reached, system cannot track shuttle anymore</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ShErr.3">
+      <tuv xml:lang="en">
+        <seg>Shuttle tracking error at motion. Lag error exceed lower limits during motion. Shuttle will stop motion and attempt to recover position accuray.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ShErr.4">
+      <tuv xml:lang="en">
+        <seg>Shuttle tracking error at standstill. Lag error during standstill. Shuttle will shut down.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ShErr.5">
+      <tuv xml:lang="en">
+        <seg>Shuttle tracking error at motion. Lag error exceed maximum limits during motion. Shuttle will stop motion and attempt to recover position accuray.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ShErr.6">
+      <tuv xml:lang="en">
+        <seg>Parameter error in motion buffer. Invalid parameter detected in motion buffer. Command will be ignored.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AxisErr.0">
+      <tuv xml:lang="en">
+        <seg>X</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AxisErr.1">
+      <tuv xml:lang="en">
+        <seg>Y</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AxisErr.2">
+      <tuv xml:lang="en">
+        <seg>Z</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AxisErr.3">
+      <tuv xml:lang="en">
+        <seg>Rx</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AxisErr.4">
+      <tuv xml:lang="en">
+        <seg>Ry</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AxisErr.5">
+      <tuv xml:lang="en">
+        <seg>Rz</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
