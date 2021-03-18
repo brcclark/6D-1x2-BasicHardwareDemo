@@ -75,7 +75,7 @@ PROGRAM _CYCLIC
 					RoboBasicFb.MoveProgram := TRUE;
 								
 					IF(RoboBasicFb.Info.Program.ProgramPhase = mcPRGPH_REAL_RUN AND gRobotIf.Pars.ShuttleIdx <> STATION_IS_EMPTY AND OnlinePath.Enabled) THEN
-						OnlinePath.PositionOffset[0] := masterPositionFb.CyclicPosition * 1000 - gRobotIf.Pars.SyncPosition.X;
+						OnlinePath.PositionOffset[0] := gShuttleIf[gRobotIf.Pars.ShuttleIdx].Status.CyclicPositionX * 1000 - gRobotIf.Pars.SyncPosition.X;
 						gRobotIf.Status.AtSync := FALSE;
 										
 						gRobotIf.Status.Synced := TRUE;
@@ -98,7 +98,7 @@ PROGRAM _CYCLIC
 		RBT_SYNC:
 			IF(masterPositionFb.Valid) THEN
 				//Continually update the online path influencer with the shuttle's position corrected for the offset
-				OnlinePath.PositionOffset[0] := masterPositionFb.CyclicPosition * 1000 - gRobotIf.Pars.SyncPosition.X;
+				OnlinePath.PositionOffset[0] := gShuttleIf[gRobotIf.Pars.ShuttleIdx].Status.CyclicPositionX * 1000 - gRobotIf.Pars.SyncPosition.X;
 			END_IF	
 			
 			//Gcode program sets the flag to be false when the "place" or w/e routine has finished. When this happens,

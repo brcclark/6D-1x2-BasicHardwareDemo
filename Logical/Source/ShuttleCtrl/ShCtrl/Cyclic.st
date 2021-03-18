@@ -40,7 +40,7 @@ PROGRAM _CYCLIC
 					gShuttleIf[i].Status.Error := TRUE;
 					gShuttleIf[i].Status.ErrorState := shState[i];
 					shState[i] := SH_ERROR;
-				ELSIF shFbs[i].ShRunMacroFb.Acknowledge THEN //Check to see if the shuttle is ready to sync with the robot
+				ELSIF shFbs[i].ShRunMacroFb.Acknowledge AND gShuttleIf[i].Status.ShuttleInfo.Position.Value.Y <= 0.0601 THEN //Check to see if the shuttle is ready to sync with the robot
 					gLoadStationIf.Par.ShuttleIdx := i;
 					gLoadStationIf.Cmd.Process := TRUE;
 				
@@ -66,7 +66,7 @@ PROGRAM _CYCLIC
 		
 		END_CASE;
 		shFbs[i].ShRunMacroFb();
-	
+		shFbs[i].ReadCyclicPos();
 		IF gShuttleIf[i].Cmd.ResetProductInfo THEN
 			gShuttleIf[i].Status.Error := FALSE;
 			gShuttleIf[i].Status.ErrorState := 0;

@@ -124,7 +124,9 @@ TYPE
 	gShuttleIfMacroEnum : 
 		( (*Macro IDs that are used to denote which macro means what*)
 		MACRO_ROBOT_PROCESS := 128, (*Macro ID used for sending a shuttle from the load station to the print station*)
-		MACRO_RECOVERY_GROUP0 (*Macro ID used for recovering the group 0 shuttles*)
+		MACRO_ROBOT_PROCESS1, (*Macro ID used for sending a shuttle from the load station to the print station*)
+		MACRO_RECOVERY_GROUP0 := 135, (*Macro ID used for recovering the group 0 shuttles*)
+		MACRO_RECOVERY_GROUP1 (*Macro ID used for recovering the group 0 shuttles*)
 		);
 	gShuttleIfDestEnum : 
 		( (*Destinations for a shuttle to move to*)

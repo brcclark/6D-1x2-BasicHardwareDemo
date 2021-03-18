@@ -1,8 +1,6 @@
 
 
 PROGRAM _INIT
-	FOR i:=0 TO MAX_SHUTTLE_COUNT-1 DO
-		gShuttleIf[i].Par.MacroIDs.RobotProcessMacro := MACRO_ROBOT_PROCESS;
-	
-	END_FOR;
+	gShuttleIf[0].Par.MacroIDs.RobotProcessMacro := MACRO_ROBOT_PROCESS;
+	gShuttleIf[1].Par.MacroIDs.RobotProcessMacro := MACRO_ROBOT_PROCESS1;
 END_PROGRAM
