@@ -90,21 +90,5 @@
 			<Source xsi:type="snippet" refId="RobotIfState" attribute="value" />
 			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="toRobotState" attribute="value" />
 		</Binding>
-	<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Cmd.Tare" attribute="value" />
-<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbTare" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Cmd.Weigh" attribute="value" />
-<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbWeighShuttle" attribute="value" />
-</Binding>
-		<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Status.ProductWeight" attribute="value" />
-<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="OnlineChartGraph1" attribute="value" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Status.ProductWeight" attribute="value" />
-<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="noWeighValue" attribute="value" />
-</Binding>
-</Bindings>
+	</Bindings>
 </BindingsSet>

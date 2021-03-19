@@ -34,7 +34,7 @@
       <Property ID="TrcRecordedDataName" />
     </Group>
     <Group ID="TrcDataPointList">
-      <Property ID="TrcDataPoint[1]" Value="::gShuttleIf[0].Status.ProductWeight" />
+      <Property ID="TrcDataPoint[1]" Value="::gShuttleIf[0].Status.ShuttleInfo.Force.Value.Fz" />
       <Property ID="TrcDataPoint[2]" />
       <Property ID="TrcDataPoint[3]" />
       <Property ID="TrcDataPoint[4]" />

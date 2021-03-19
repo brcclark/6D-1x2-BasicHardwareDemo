@@ -43,21 +43,5 @@
         <Widget xsi:type="widgets.brease.TextOutput" id="toRobotState" top="72" left="6" width="276" zIndex="5" textColor="rgba(0, 0, 0, 1)" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbTare" top="192" left="664" zIndex="4" text="Tare" />
-    <Widget xsi:type="widgets.brease.ToggleButton" id="tbWeighShuttle" top="192" left="788" width="98" zIndex="5" text="Weigh" />
-    <Widget xsi:type="widgets.brease.OnlineChart" id="OnlineChart1" top="246" left="426" width="688" height="402" zIndex="6">
-      <Widgets>
-        <Widget xsi:type="widgets.brease.OnlineChartTimeAxis" id="OnlineChartTimeAxis1" zIndex="0" timeSpan="15">
-          <Widgets />
-        </Widget>
-        <Widget xsi:type="widgets.brease.OnlineChartYAxis" id="OnlineChartYAxis1" zIndex="1">
-          <Widgets>
-            <Widget xsi:type="widgets.brease.OnlineChartGraph" id="OnlineChartGraph1" zIndex="0" maxValue="700" xAxisRefId="OnlineChartTimeAxis1" />
-          </Widgets>
-        </Widget>
-      </Widgets>
-    </Widget>
-    <Widget xsi:type="widgets.brease.NumericOutput" id="noWeighValue" top="670" left="882" zIndex="7" textColor="rgba(0, 0, 0, 1)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label4" top="670" left="778" zIndex="8" text="Weight" textColor="rgba(0, 0, 0, 1)" />
   </Widgets>
 </Content>
