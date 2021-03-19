@@ -89,6 +89,7 @@ PROGRAM _CYCLIC
 				state := RBT_RUN;
 			ELSIF NOT gRobotIf.Cmds.Process.Run THEN
 				OnlinePath.Enable := FALSE;
+				gRobotIf.Cmds.Process.Sync := FALSE;
 				brsmemset(ADR(OnlinePath.PositionOffset),0,SIZEOF(OnlinePath.PositionOffset));
 				RoboBasicFb.Stop := TRUE;
 				RoboBasicFb.MoveProgram := FALSE;

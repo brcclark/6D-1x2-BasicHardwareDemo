@@ -112,6 +112,9 @@ TYPE
 		Stop : BOOL; (*Command to stop the process for a shuttle*)
 		MoveMacro : BOOL;
 		MovePlane : BOOL;
+		Land : BOOL;
+		Tare : BOOL;
+		Weigh : BOOL;
 	END_STRUCT;
 	gShuttleIfCfgMacrosTyp : 	STRUCT  (*Structure of the macro IDs used for operation*)
 		RobotProcessMacro : gShuttleIfMacroEnum; (*Macro ID used for sending a shuttle from the load station to the print station*)
@@ -152,6 +155,9 @@ TYPE
 		SH_IDLE, (*Shuttle is in the idle state after having been recovered*)
 		SH_MOVE_PLANE,
 		SH_MOVE_MACRO,
+		SH_LANDING,
+		SH_LANDED,
+		SH_WEIGHING,
 		SH_STOPPING,
 		SH_ERROR := 65535 (*Shuttle is in the error state*)
 		);
@@ -163,6 +169,8 @@ TYPE
 		Recovered : BOOL; (*Shuttle has been recovered*)
 		CyclicPositionX : REAL;
 		CyclicPositionY : REAL;
+		TareWeight : REAL;
+		ProductWeight : REAL;
 	END_STRUCT;
 	gShuttleIfTyp : 	STRUCT  (*Interface for controlling a shuttle*)
 		Cmd : gShuttleIfCmdTyp; (*Commands to issue to a shuttle*)

@@ -94,5 +94,6 @@
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asarprof" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="MTFilter" Source="Libraries.MTFilter.lby" Memory="UserROM" Language="binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

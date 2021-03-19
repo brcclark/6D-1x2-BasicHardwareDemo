@@ -7,4 +7,7 @@ VAR
 	pDebugState : REFERENCE TO ShStateEnum;
 	debugIdx : USINT;
 	tstCmd : BOOL;
+	Tare : BOOL;
+	ResetAvg : BOOL;
+	CalibrationValue : REAL;
 END_VAR

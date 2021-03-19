@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT/States</prop>
+  </header>
+  <body>
+    <tu tuid="Main.0">
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Main Off</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main.1">
+      <tuv xml:lang="en">
+        <seg>Main Init</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main.2">
+      <tuv xml:lang="en">
+        <seg>Main Recovering</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main.3">
+      <tuv xml:lang="en">
+        <seg>Main Ready</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main.4">
+      <tuv xml:lang="en">
+        <seg>Main Starting</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main.5">
+      <tuv xml:lang="en">
+        <seg>Starting Robot</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main.6">
+      <tuv xml:lang="en">
+        <seg>Main Running</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main.7">
+      <tuv xml:lang="en">
+        <seg>Main Stopping</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main.8">
+      <tuv xml:lang="en">
+        <seg>Main Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Macro.0">
+      <tuv xml:lang="en">
+        <seg>Idle</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Macro.1">
+      <tuv xml:lang="en">
+        <seg>Load</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Macro.2">
+      <tuv xml:lang="en">
+        <seg>Count Check</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Macro.3">
+      <tuv xml:lang="en">
+        <seg>Clear</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Macro.4">
+      <tuv xml:lang="en">
+        <seg>Done</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Macro.5">
+      <tuv xml:lang="en">
+        <seg>Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6D.0">
+      <tuv xml:lang="en">
+        <seg>Reset</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6D.1">
+      <tuv xml:lang="en">
+        <seg>Power Off</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6D.2">
+      <tuv xml:lang="en">
+        <seg>Inactive</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6D.3">
+      <tuv xml:lang="en">
+        <seg>Power On</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6D.4">
+      <tuv xml:lang="en">
+        <seg>Wait Activation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6D.5">
+      <tuv xml:lang="en">
+        <seg>Init Macro</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6D.6">
+      <tuv xml:lang="en">
+        <seg>Ready</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6D.7">
+      <tuv xml:lang="en">
+        <seg>Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.0">
+      <tuv xml:lang="en">
+        <seg>Off</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.1">
+      <tuv xml:lang="en">
+        <seg>Init</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.2">
+      <tuv xml:lang="en">
+        <seg>Startup</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.3">
+      <tuv xml:lang="en">
+        <seg>Idle</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.4">
+      <tuv xml:lang="en">
+        <seg>Moving In Plane</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.5">
+      <tuv xml:lang="en">
+        <seg>Moving Macro</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.6">
+      <tuv xml:lang="en">
+        <seg>Landing</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.7">
+      <tuv xml:lang="en">
+        <seg>Landed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.8">
+      <tuv xml:lang="en">
+        <seg>Stopping</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Shuttle.9">
+      <tuv xml:lang="en">
+        <seg>Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.0">
+      <tuv xml:lang="en">
+        <seg>Off</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.1">
+      <tuv xml:lang="en">
+        <seg>Powering On</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.2">
+      <tuv xml:lang="en">
+        <seg>Homing</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.3">
+      <tuv xml:lang="en">
+        <seg>Idle</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.4">
+      <tuv xml:lang="en">
+        <seg>Waiting to Sync</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.5">
+      <tuv xml:lang="en">
+        <seg>In Sync</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.6">
+      <tuv xml:lang="en">
+        <seg>Desyncing</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.7">
+      <tuv xml:lang="en">
+        <seg>Moving to sync</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.8">
+      <tuv xml:lang="en">
+        <seg>Running</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.9">
+      <tuv xml:lang="en">
+        <seg>Stopping</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Robot.10">
+      <tuv xml:lang="en">
+        <seg>Error</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

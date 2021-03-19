@@ -13,6 +13,15 @@
         <Variable Name="gSceneViewerIf" AutomaticEnable="True" />
         <Variable Name="gMainIf" AutomaticEnable="True" />
         <Variable Name="gPickPlaceIf" AutomaticEnable="True" />
+        <Variable Name="gShuttleIf" EnableArrayElements="True">
+          <Variable Name="gShuttleIf[0]">
+            <Variable Name="Status">
+              <Variable Name="ProductWeight" Historizing="True" HistoryBufferSize="1000" HistorySamplingInterval="Timer5" />
+            </Variable>
+          </Variable>
+        </Variable>
+        <Variable Name="gRobotIf" AutomaticEnable="True" />
+        <Variable Name="gProcessInfoIf" AutomaticEnable="True" />
       </GlobalVariables>
       <Task Name="RbtCtrl">
         <Variable Name="RoboBasicFb">
@@ -20,11 +29,18 @@
             <Variable Name="JointAxisPosition" EnableArrayElements="True" />
           </Variable>
         </Variable>
+        <Variable Name="state" />
       </Task>
       <Task Name="Vis">
         <Variable Name="Vis" AutomaticEnable="True">
           <Variable Name="Shuttles" EnableArrayElements="True" />
         </Variable>
+      </Task>
+      <Task Name="Main">
+        <Variable Name="state" />
+      </Task>
+      <Task Name="ShCtrl">
+        <Variable Name="shState" EnableArrayElements="True" />
       </Task>
     </Module>
   </DefaultView>

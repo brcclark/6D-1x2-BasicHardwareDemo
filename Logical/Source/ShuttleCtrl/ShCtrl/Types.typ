@@ -6,5 +6,8 @@ TYPE
 		ReadCyclicPosY : MC_BR_ReadCyclicChAxis_Acp6D;
 		MovePlane : MC_BR_MoveInPlane_Acp6D;
 		Stop : MC_BR_Stop_Acp6D;
+		LandCtrl : MC_BR_LevitationCtrl_Acp6D;
+		MovingAvgFb : MTFilterMovingAverage;
+		WeightAvgFb : MTFilterMovingAverage;
 	END_STRUCT;
 END_TYPE
