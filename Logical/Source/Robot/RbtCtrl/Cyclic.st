@@ -8,6 +8,8 @@ PROGRAM _CYCLIC
 			gSceneViewerIf.Cmds.Clear := TRUE;
 			gSceneViewerIf.Cmds.Record := FALSE;
 				
+			gRobotIf.Pars.ShuttleIdx := STATION_IS_EMPTY;
+			
 			IF gRobotIf.Cmds.Admin.Power THEN
 				RoboBasicFb.Power := TRUE;
 				gSceneViewerIf.Cmds.Clear := FALSE;
@@ -20,12 +22,13 @@ PROGRAM _CYCLIC
 		RBT_POWER_ON:
 			IF RoboBasicFb.PowerOn THEN
 				gRobotIf.Status.Powered := TRUE;
-			ELSIF NOT gRobotIf.Status.Homed THEN
-				RoboBasicFb.Home := TRUE;
-						
-				state := RBT_HOME;
-			ELSE
-				state := RBT_IDLE;
+				IF NOT gRobotIf.Status.Homed THEN
+					RoboBasicFb.Home := TRUE;
+							
+					state := RBT_HOME;
+				ELSE
+					state := RBT_IDLE;
+				END_IF
 			END_IF
 		
 		RBT_HOME:
@@ -55,37 +58,16 @@ PROGRAM _CYCLIC
 				RoboBasicFb.MoveProgram := TRUE;
 				IF RoboBasicFb.Info.Program.ProgramPhase = mcPRGPH_REAL_RUN AND getCoordSystemIdent.Done THEN
 								
-					gPickPlaceIf.Run := TRUE;		
+					gPickPlaceIf.Run := TRUE;	
+					gRobotIf.Status.Running := TRUE;
 					gRobotIf.Pars.SyncFrameIdent := getCoordSystemIdent.Ident;
 					deltaPars.CoordSystem := gRobotIf.Pars.SyncFrameIdent;
 					OnlinePath.CoordSystem := deltaPars.CoordSystem;
 					getCoordSystemIdent.Execute := FALSE;	
-									
+						
 					state := RBT_RUN;
 				END_IF
-			
-			ELSE
-				IF(gRobotIf.Cmds.Process.Sync) THEN
-					//Get the position
-					masterPositionFb.Axis := ADR(gSyncIf.Status.AxisToSync);
-					masterPositionFb.Enable := TRUE;
-								
-					OnlinePath.Enable := TRUE;
-								
-					RoboBasicFb.MoveProgram := TRUE;
-								
-					IF(RoboBasicFb.Info.Program.ProgramPhase = mcPRGPH_REAL_RUN AND gRobotIf.Pars.ShuttleIdx <> STATION_IS_EMPTY AND OnlinePath.Enabled) THEN
-						OnlinePath.PositionOffset[0] := gShuttleIf[gRobotIf.Pars.ShuttleIdx].Status.CyclicPositionX * 1000 - gRobotIf.Pars.SyncPosition.X;
-						gRobotIf.Status.AtSync := FALSE;
-										
-						gRobotIf.Status.Synced := TRUE;
-										
-						state := RBT_SYNC;
-					END_IF
-				END_IF
 			END_IF
-					
-			
 			
 		RBT_MOVE_TO_SYNC:
 			IF(RoboBasicFb.MoveDone) THEN
@@ -96,45 +78,47 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		RBT_SYNC:
-			IF(masterPositionFb.Valid) THEN
-				//Continually update the online path influencer with the shuttle's position corrected for the offset
-				OnlinePath.PositionOffset[0] := gShuttleIf[gRobotIf.Pars.ShuttleIdx].Status.CyclicPositionX * 1000 - gRobotIf.Pars.SyncPosition.X;
-			END_IF	
 			
-			//Gcode program sets the flag to be false when the "place" or w/e routine has finished. When this happens,
-			//	Stop the online path influencer, stop the cyclic pos read, and tell the track to go ahead and release the shuttle
-			IF(NOT gPickPlaceIf.Status.ProductPresent) THEN
-				
-				gRobotIf.Status.Synced := FALSE;
-				gPickPlaceIf.Status.ProductOK := TRUE;
-				gSyncIf.Cmds.Proc.ReleaseUnSync := TRUE;
-					
+			//Continually update the online path influencer with the shuttle's position corrected for the offset
+			OnlinePath.PositionOffset[0] := gShuttleIf[gRobotIf.Pars.ShuttleIdx].Status.CyclicPositionX * 1000 - gRobotIf.Pars.SyncPosition.X;
+			OnlinePath.PositionOffset[1] := gShuttleIf[gRobotIf.Pars.ShuttleIdx].Status.CyclicPositionY * 1000 - gRobotIf.Pars.SyncPosition.Y;
+						
+			IF NOT gRobotIf.Cmds.Process.Sync THEN
 				OnlinePath.Enable := FALSE;
 				brsmemset(ADR(OnlinePath.PositionOffset),0,SIZEOF(OnlinePath.PositionOffset));
-				masterPositionFb.Enable := FALSE;
-					
 				state := RBT_RUN;
+			ELSIF NOT gRobotIf.Cmds.Process.Run THEN
+				OnlinePath.Enable := FALSE;
+				brsmemset(ADR(OnlinePath.PositionOffset),0,SIZEOF(OnlinePath.PositionOffset));
+				RoboBasicFb.Stop := TRUE;
+				RoboBasicFb.MoveProgram := FALSE;
+				
+				state := RBT_STOP;
 			END_IF
+			
+			
 		RBT_RUN:
-		//Running the program right now
-			IF(gSyncIf.Status.SyncReady AND gPickPlaceIf.Status.ProductPresent) THEN
-				masterPositionFb.Axis := ADR(gSyncIf.Status.AxisToSync);
-				masterPositionFb.Enable := TRUE;
-				gRobotIf.Status.Synced := TRUE;
-				gPickPlaceIf.Sync := TRUE;
-						
-				//Tell the Trak to release the shuttle
-				gSyncIf.Cmds.Proc.ReleaseSync := TRUE;
+			//Running the program right now
+			IF gRobotIf.Cmds.Process.Sync THEN
 				OnlinePath.Enable := TRUE;
 						
 				state := RBT_SYNC;
+			ELSIF NOT gRobotIf.Cmds.Process.Run THEN
+				OnlinePath.Enable := FALSE;
+				RoboBasicFb.Stop := TRUE;
+				RoboBasicFb.MoveProgram := FALSE;
+				
+				state := RBT_STOP;
+			END_IF
+		RBT_STOP:
+			IF RoboBasicFb.Stopped THEN
+				RoboBasicFb.Stop := FALSE;
+				state := RBT_IDLE;
 			END_IF
 		
-		END_CASE
-     
+	END_CASE
 	
-		RoboBasicFb();
-		OnlinePath();
-		masterPositionFb();
+	RoboBasicFb();
+	OnlinePath();
 	 
 END_PROGRAM

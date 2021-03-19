@@ -3,8 +3,8 @@
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
     <Task Name="6DCtrl" Source="Source.6DCtrl.6DCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="RbtCtrl" Source="Source.Robot.RbtCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="ShCtrl" Source="Source.ShuttleCtrl.ShCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="RbtCtrl" Source="Source.Robot.RbtCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2">
     <Task Name="Main" Source="Source.Main.Main.prg" Memory="UserROM" Language="IEC" Debugging="true" />

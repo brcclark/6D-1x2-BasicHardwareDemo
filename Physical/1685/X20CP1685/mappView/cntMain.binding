@@ -6,19 +6,19 @@
 <Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbRobotPower" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::RbtHandler:RoboBasicFb.Error" attribute="value" />
+<Source xsi:type="opcUa" refId="::RbtCtrl:RoboBasicFb.Error" attribute="value" />
 <Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbErrorPresent" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::RbtHandler:RoboBasicFb.ErrorReset" attribute="value" />
+<Source xsi:type="opcUa" refId="::RbtCtrl:RoboBasicFb.ErrorReset" attribute="value" />
 <Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbErrorReset" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-			<Source xsi:type="opcUa" refId="::RbtHandler:RoboBasicFb.MoveProgram" attribute="value" />
+			<Source xsi:type="opcUa" refId="::RbtCtrl:RoboBasicFb.MoveProgram" attribute="value" />
 <Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbMoveProgram" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::RbtHandler:deltaPars.ProgramName" attribute="value" />
+<Source xsi:type="opcUa" refId="::RbtCtrl:deltaPars.ProgramName" attribute="value" />
 <Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tiProgramName" attribute="value" />
 </Binding>
 <Binding mode="twoWay">

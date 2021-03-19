@@ -1,3 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?>
-<OpcUaSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" FileVersion="4">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="7" ArVersion="C4.90">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gSceneViewerIf" AutomaticEnable="True" />
+        <Variable Name="gMainIf" AutomaticEnable="True" />
+        <Variable Name="gPickPlaceIf" AutomaticEnable="True" />
+      </GlobalVariables>
+      <Task Name="RbtCtrl">
+        <Variable Name="RoboBasicFb">
+          <Variable Name="Info">
+            <Variable Name="JointAxisPosition" EnableArrayElements="True" />
+          </Variable>
+        </Variable>
+      </Task>
+      <Task Name="Vis">
+        <Variable Name="Vis" AutomaticEnable="True">
+          <Variable Name="Shuttles" EnableArrayElements="True" />
+        </Variable>
+      </Task>
+    </Module>
+  </DefaultView>
 </OpcUaSource>

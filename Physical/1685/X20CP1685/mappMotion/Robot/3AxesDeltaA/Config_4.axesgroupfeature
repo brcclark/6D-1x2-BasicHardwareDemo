@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
 <Configuration>
   <Element ID="Feature_Programs" Type="axesgroupfeature">
     <Selector ID="Type" Value="Program">
@@ -11,6 +12,7 @@
         <Selector ID="ContourConnection" Value="Inactive" />
         <Selector ID="ProgrammingUnits" Value="UseAxesGroupSettings" />
         <Group ID="Feedrates">
+          <Selector ID="FeedPath" Value="Standard" />
           <Selector ID="FeedCharacteristic" Value="StandardCharacteristic" />
           <Selector ID="FeedType" Value="Feedrate" />
           <Selector ID="FeedReduction" Value="Inactive" />
@@ -46,9 +48,9 @@
             <Property ID="Name" Value="RobotBase" />
             <Selector ID="Type" Value="StandardFrame">
               <Group ID="Translation">
-                <Property ID="X" Value="0.0" />
+                <Property ID="X" Value="240.0" />
                 <Property ID="Y" Value="0.0" />
-                <Property ID="Z" Value="1600" />
+                <Property ID="Z" Value="1425.0" />
               </Group>
               <Group ID="Orientation">
                 <Property ID="Angle1" Value="0.0" />
@@ -61,14 +63,14 @@
             <Property ID="Name" Value="TrakSync" />
             <Selector ID="Type" Value="StandardFrame">
               <Group ID="Translation">
-                <Property ID="X" Value="330" />
+                <Property ID="X" Value="120" />
                 <Property ID="Y" Value="0.0" />
-                <Property ID="Z" Value="292.5" />
+                <Property ID="Z" Value="90" />
               </Group>
               <Group ID="Orientation">
                 <Property ID="Angle1" Value="0.0" />
                 <Property ID="Angle2" Value="0.0" />
-                <Property ID="Angle3" Value="180.0" />
+                <Property ID="Angle3" Value="0" />
               </Group>
             </Selector>
           </Group>

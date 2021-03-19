@@ -1,0 +1,299 @@
+﻿<?xml version="1.0"?>
+<Object objecttypeid="1" name="Scene" visible="1" mask="" binding="" jointoparent="0">
+	<ParID parid="80" val="FALSE"/>
+	<ParID parid="81" val="60"/>
+	<ParID parid="82" val="0.466509"/>
+	<ParID parid="90" val="0"/>
+	<ParID parid="100" val="628.857"/>
+	<ParID parid="101" val="-3593.7"/>
+	<ParID parid="102" val="417.972"/>
+	<ParID parid="103" val="-0.0136795"/>
+	<ParID parid="104" val="0.999906"/>
+	<ParID parid="105" val="0.00111224"/>
+	<ParID parid="106" val="0.00896779"/>
+	<ParID parid="107" val="-0.000989571"/>
+	<ParID parid="108" val="0.999959"/>
+	<ParID parid="110" val="0.5"/>
+	<ParID parid="120" val="1,1,1"/>
+	<ParID parid="140" val="0.75,0.75,0.75"/>
+	<ParID parid="145" val=""/>
+	<ParID parid="146" val="0"/>
+	<Object objecttypeid="2" name="Light 1" visible="1" mask="" binding="" jointoparent="0">
+		<ParID parid="100" val="1500"/>
+		<ParID parid="101" val="-3000"/>
+		<ParID parid="102" val="-3000"/>
+		<ParID parid="130" val="1"/>
+		<ParID parid="140" val="1,1,1"/>
+		<ParID parid="150" val="FALSE"/>
+	</Object>
+	<Object objecttypeid="2" name="Light 2" visible="1" mask="" binding="" jointoparent="0">
+		<ParID parid="100" val="0"/>
+		<ParID parid="101" val="0"/>
+		<ParID parid="102" val="6000"/>
+		<ParID parid="130" val="1"/>
+		<ParID parid="140" val="1,1,1"/>
+		<ParID parid="150" val="FALSE"/>
+	</Object>
+	<Object objecttypeid="250" name="Positioner_Segment" visible="1" mask="" binding="" jointoparent="0">
+		<ParID parid="100" val="0"/>
+		<ParID parid="101" val="0"/>
+		<ParID parid="102" val="0"/>
+		<ParID parid="103" val="0"/>
+		<ParID parid="104" val="0"/>
+		<ParID parid="105" val="0"/>
+		<ParID parid="106" val="1"/>
+		<ParID parid="107" val="1"/>
+		<ParID parid="108" val="1"/>
+		<ParID parid="124" val="100"/>
+		<ParID parid="125" val="TRUE"/>
+		<Object objecttypeid="110" name="Segment1" visible="1" mask="" binding="" jointoparent="0">
+			<ParID parid="100" val="0"/>
+			<ParID parid="101" val="0"/>
+			<ParID parid="102" val="0"/>
+			<ParID parid="103" val="0"/>
+			<ParID parid="104" val="0"/>
+			<ParID parid="105" val="0"/>
+			<ParID parid="106" val="1"/>
+			<ParID parid="107" val="1"/>
+			<ParID parid="108" val="1"/>
+			<ParID parid="120" val="Models/S3-A-04_Segment.stl"/>
+			<ParID parid="121" val="13: Black Metal Shine"/>
+			<ParID parid="130" val="2"/>
+		</Object>
+		<Object objecttypeid="110" name="Segment2" visible="1" mask="" binding="" jointoparent="0">
+			<ParID parid="100" val="240"/>
+			<ParID parid="101" val="0"/>
+			<ParID parid="102" val="0"/>
+			<ParID parid="103" val="0"/>
+			<ParID parid="104" val="0"/>
+			<ParID parid="105" val="0"/>
+			<ParID parid="106" val="1"/>
+			<ParID parid="107" val="1"/>
+			<ParID parid="108" val="1"/>
+			<ParID parid="120" val="Models/S3-A-04_Segment.stl"/>
+			<ParID parid="121" val="13: Black Metal Shine"/>
+			<ParID parid="130" val="2"/>
+		</Object>
+	</Object>
+	<Object objecttypeid="250" name="Shuttles" visible="1" mask="" binding="" jointoparent="0">
+		<ParID parid="100" val="0"/>
+		<ParID parid="101" val="0"/>
+		<ParID parid="102" val="83"/>
+		<ParID parid="103" val="0"/>
+		<ParID parid="104" val="0"/>
+		<ParID parid="105" val="0"/>
+		<ParID parid="106" val="1"/>
+		<ParID parid="107" val="1"/>
+		<ParID parid="108" val="1"/>
+		<ParID parid="124" val="100"/>
+		<ParID parid="125" val="FALSE"/>
+		<Object objecttypeid="110" name="Shuttle01" visible="1" mask="" binding="#14*::Vis:Vis.Shuttles[0].Visible#100*::Vis:Vis.Shuttles[0].Pos.X#101*::Vis:Vis.Shuttles[0].Pos.Y#102*::Vis:Vis.Shuttles[0].Pos.Z#103*::Vis:Vis.Shuttles[0].Pos.RZ#104*::Vis:Vis.Shuttles[0].Pos.RY#105*::Vis:Vis.Shuttles[0].Pos.RX" jointoparent="0">
+			<ParID parid="100" val="540"/>
+			<ParID parid="101" val="540"/>
+			<ParID parid="102" val="1.99995"/>
+			<ParID parid="103" val="0"/>
+			<ParID parid="104" val="0"/>
+			<ParID parid="105" val="0"/>
+			<ParID parid="106" val="1"/>
+			<ParID parid="107" val="1"/>
+			<ParID parid="108" val="1"/>
+			<ParID parid="120" val="Models/M3-06-03.stl"/>
+			<ParID parid="121" val="3: Grey Matte"/>
+			<ParID parid="130" val="1"/>
+			<Object objecttypeid="200" name="Path tracker" visible="0" mask="" binding="#14*::Vis:Vis.Shuttles[0].ScnViewer.EnablePath#140*::Vis:Vis.Shuttles[0].ScnViewer.ClearPath#141*::Vis:Vis.Shuttles[0].ScnViewer.EnablePath" jointoparent="0">
+				<ParID parid="100" val="0"/>
+				<ParID parid="101" val="0"/>
+				<ParID parid="102" val="57"/>
+				<ParID parid="103" val="0"/>
+				<ParID parid="104" val="0"/>
+				<ParID parid="105" val="0"/>
+				<ParID parid="109" val=""/>
+				<ParID parid="110" val="1"/>
+				<ParID parid="111" val="1024"/>
+				<ParID parid="112" val="0"/>
+				<ParID parid="113" val="0"/>
+				<ParID parid="130" val="0,0,0"/>
+				<ParID parid="131" val="0,0,0"/>
+				<ParID parid="140" val="FALSE"/>
+				<ParID parid="141" val="FALSE"/>
+			</Object>
+			<Object objecttypeid="160" name="Positioner" visible="0" mask="" binding="#14*::Vis:Vis.Shuttles[0].ScnViewer.EnablePositioner" jointoparent="0">
+				<ParID parid="100" val="0"/>
+				<ParID parid="101" val="0"/>
+				<ParID parid="102" val="0"/>
+				<ParID parid="103" val="0"/>
+				<ParID parid="104" val="0"/>
+				<ParID parid="105" val="0"/>
+				<ParID parid="109" val=""/>
+				<ParID parid="110" val="50"/>
+				<ParID parid="120" val="20"/>
+				<ParID parid="121" val="1"/>
+				<ParID parid="130" val="0,0,0"/>
+				<ParID parid="150" val="FALSE"/>
+				<ParID parid="151" val="32"/>
+			</Object>
+		</Object>
+		<Object objecttypeid="110" name="Shuttle02" visible="1" mask="" binding="#14*::Vis:Vis.Shuttles[1].Visible#100*::Vis:Vis.Shuttles[1].Pos.X#101*::Vis:Vis.Shuttles[1].Pos.Y#102*::Vis:Vis.Shuttles[1].Pos.Z#103*::Vis:Vis.Shuttles[1].Pos.RZ#104*::Vis:Vis.Shuttles[1].Pos.RY#105*::Vis:Vis.Shuttles[1].Pos.RX" jointoparent="0">
+			<ParID parid="100" val="660"/>
+			<ParID parid="101" val="660"/>
+			<ParID parid="102" val="1.99995"/>
+			<ParID parid="103" val="0"/>
+			<ParID parid="104" val="0"/>
+			<ParID parid="105" val="0"/>
+			<ParID parid="106" val="1"/>
+			<ParID parid="107" val="1"/>
+			<ParID parid="108" val="1"/>
+			<ParID parid="120" val="Models/M3-06-03.stl"/>
+			<ParID parid="121" val="3: Grey Matte"/>
+			<ParID parid="130" val="1"/>
+			<Object objecttypeid="200" name="Path tracker" visible="0" mask="" binding="#14*::Vis:Vis.Shuttles[1].ScnViewer.EnablePath#140*::Vis:Vis.Shuttles[1].ScnViewer.ClearPath#141*::Vis:Vis.Shuttles[1].ScnViewer.EnablePath" jointoparent="0">
+				<ParID parid="100" val="0"/>
+				<ParID parid="101" val="0"/>
+				<ParID parid="102" val="10"/>
+				<ParID parid="103" val="0"/>
+				<ParID parid="104" val="0"/>
+				<ParID parid="105" val="0"/>
+				<ParID parid="109" val=""/>
+				<ParID parid="110" val="1"/>
+				<ParID parid="111" val="1024"/>
+				<ParID parid="112" val="0"/>
+				<ParID parid="113" val="0"/>
+				<ParID parid="130" val="1,0,0"/>
+				<ParID parid="131" val="0,0,0"/>
+				<ParID parid="140" val="FALSE"/>
+				<ParID parid="141" val="FALSE"/>
+			</Object>
+			<Object objecttypeid="160" name="Positioner" visible="0" mask="" binding="#14*::Vis:Vis.Shuttles[1].ScnViewer.EnablePositioner" jointoparent="0">
+				<ParID parid="100" val="0"/>
+				<ParID parid="101" val="0"/>
+				<ParID parid="102" val="0"/>
+				<ParID parid="103" val="0"/>
+				<ParID parid="104" val="0"/>
+				<ParID parid="105" val="0"/>
+				<ParID parid="109" val=""/>
+				<ParID parid="110" val="50"/>
+				<ParID parid="120" val="20"/>
+				<ParID parid="121" val="1"/>
+				<ParID parid="130" val="0,0,0"/>
+				<ParID parid="150" val="FALSE"/>
+				<ParID parid="151" val="32"/>
+			</Object>
+		</Object>
+	</Object>
+	<Object objecttypeid="250" name="RobotBase" visible="1" mask="" binding="" jointoparent="0">
+		<ParID parid="100" val="240"/>
+		<ParID parid="101" val="0"/>
+		<ParID parid="102" val="1425"/>
+		<ParID parid="103" val="0"/>
+		<ParID parid="104" val="0"/>
+		<ParID parid="105" val="0"/>
+		<ParID parid="106" val="1"/>
+		<ParID parid="107" val="1"/>
+		<ParID parid="108" val="1"/>
+		<ParID parid="124" val="100"/>
+		<ParID parid="125" val="TRUE"/>
+		<Object objecttypeid="870" name="ABB IRB 360-1/1600" visible="1" mask="" binding="#110*::RbtHandler:RoboBasicFb.Info.JointAxisPosition[0]#111*::RbtHandler:RoboBasicFb.Info.JointAxisPosition[1]#112*::RbtHandler:RoboBasicFb.Info.JointAxisPosition[2]" jointoparent="0">
+			<ParID parid="100" val="0"/>
+			<ParID parid="101" val="0"/>
+			<ParID parid="102" val="0"/>
+			<ParID parid="103" val="0"/>
+			<ParID parid="104" val="0"/>
+			<ParID parid="105" val="0"/>
+			<ParID parid="110" val="-0.000317806"/>
+			<ParID parid="111" val="-0.000317806"/>
+			<ParID parid="112" val="-0.000317806"/>
+			<ParID parid="113" val="0"/>
+			<ParID parid="120" val="-1.38778e-13"/>
+			<ParID parid="121" val="1.94289e-13"/>
+			<ParID parid="122" val="-1254.37"/>
+			<ParID parid="125" val="0"/>
+			<ParID parid="130" val="16: Light Grey Matte"/>
+			<ParID parid="150" val="FALSE"/>
+			<Object objecttypeid="160" name="Positioner" visible="1" mask="" binding="" jointoparent="0">
+				<ParID parid="100" val="0"/>
+				<ParID parid="101" val="0"/>
+				<ParID parid="102" val="0"/>
+				<ParID parid="103" val="0"/>
+				<ParID parid="104" val="0"/>
+				<ParID parid="105" val="0"/>
+				<ParID parid="109" val=""/>
+				<ParID parid="110" val="50"/>
+				<ParID parid="120" val="20"/>
+				<ParID parid="121" val="1"/>
+				<ParID parid="130" val="0,0,0"/>
+				<ParID parid="150" val="FALSE"/>
+				<ParID parid="151" val="32"/>
+			</Object>
+			<Object objecttypeid="200" name="Path tracker" visible="1" mask="" binding="#140*::AsGlobalPV:gSceneViewerIf.Cmds.Clear#141*::AsGlobalPV:gSceneViewerIf.Cmds.Record" jointoparent="0">
+				<ParID parid="100" val="0"/>
+				<ParID parid="101" val="0"/>
+				<ParID parid="102" val="0"/>
+				<ParID parid="103" val="0"/>
+				<ParID parid="104" val="0"/>
+				<ParID parid="105" val="0"/>
+				<ParID parid="109" val=""/>
+				<ParID parid="110" val="1"/>
+				<ParID parid="111" val="1024"/>
+				<ParID parid="112" val="0"/>
+				<ParID parid="113" val="0"/>
+				<ParID parid="130" val="0,0,0"/>
+				<ParID parid="131" val="0,0,0"/>
+				<ParID parid="140" val="FALSE"/>
+				<ParID parid="141" val="FALSE"/>
+			</Object>
+		</Object>
+	</Object>
+</Object>
+<Materials>
+	<Material ID="0" Name="Undefined" Ambient="0.100000 0.100000 0.100000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="32.000000"/>
+	<Material ID="1" Name="Red Matte" Ambient="0.700000 0.050000 0.050000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="2" Name="Blue Matte" Ambient="0.100000 0.100000 0.800000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="3" Name="Grey Matte" Ambient="0.400000 0.400000 0.400000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="4" Name="Yellow Matte" Ambient="0.800000 0.800000 0.000000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="5" Name="Green Matte" Ambient="0.100000 0.800000 0.100000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="6" Name="Orange Matte" Ambient="0.800000 0.400000 0.000000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="7" Name="White Matte" Ambient="0.900000 0.900000 0.900000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="8" Name="Black Matte" Ambient="0.100000 0.100000 0.100000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="9" Name="Violet Matte" Ambient="0.700000 0.000000 0.700000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="10" Name="Metal Shine" Ambient="0.200000 0.200000 0.200000 1.000000" Specular="0.800000 0.800000 1.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+	<Material ID="11" Name="Red Metal Shine" Ambient="0.600000 0.000000 0.000000 1.000000" Specular="1.000000 0.700000 0.700000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="10.000000"/>
+	<Material ID="12" Name="Yellow Metal Shine" Ambient="0.500000 0.500000 0.000000 1.000000" Specular="0.600000 0.600000 0.850000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+	<Material ID="13" Name="Black Metal Shine" Ambient="0.200000 0.200000 0.200000 1.000000" Specular="0.500000 0.500000 0.500000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="12.500000"/>
+	<Material ID="14" Name="Cyan Matte" Ambient="0.000000 0.500000 0.500000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="15" Name="Magenta Matte" Ambient="0.500000 0.000000 0.500000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="16" Name="Light Grey Matte" Ambient="0.700000 0.700000 0.700000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+	<Material ID="17" Name="Cerulean Blue Shine" Ambient="0.000000 0.540000 0.750000 1.000000" Specular="0.600000 0.600000 0.850000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+	<Material ID="18" Name="Silver" Ambient="0.550000 0.600000 0.650000 1.000000" Specular="0.500000 0.550000 0.600000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+</Materials>
+<Views>
+	<View ID="2" Name="side" Zoom="0.111678" Perspective="0" ViewPoint="127.968773 -4000.000000 160.346222" ViewVector="0.000000 1.000000 0.000000" AxisOrientation="0.000000 0.000000 1.000000"/>
+	<View ID="1" Name="top" Zoom="0.239392" Perspective="0" ViewPoint="100.000000 -740.000000 760.000000" ViewVector="0.000000 0.000000 -1.000000" AxisOrientation="0.000000 1.000000 0.000000"/>
+	<View ID="3" Name="side 2" Zoom="0.217629" Perspective="0" ViewPoint="-4000.000000 -677.746826 186.060913" ViewVector="1.000000 0.000000 0.000000" AxisOrientation="0.000000 0.000000 1.000000"/>
+</Views>
+<Connection>
+	<PVI>
+		<NameTask>
+			vis
+		</NameTask>
+		<NameTime>
+		</NameTime>
+		<NameVariable>
+			vis
+		</NameVariable>
+		<ExtraSettings>
+		</ExtraSettings>
+		<ConectionParameters>
+		</ConectionParameters>
+		<RF>
+		</RF>
+		<DAIP>
+			127.0.0.1
+		</DAIP>
+		<Size>
+			0
+		</Size>
+		<TimerModeOn>
+			0
+		</TimerModeOn>
+	</PVI>
+</Connection>

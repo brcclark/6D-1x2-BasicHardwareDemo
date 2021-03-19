@@ -110,6 +110,8 @@ TYPE
 		NextStep : BOOL; (*Command for a shuttle to start the next step in the process*)
 		ResetProductInfo : BOOL; (*Command to reset all the product info on a shuttle*)
 		Stop : BOOL; (*Command to stop the process for a shuttle*)
+		MoveMacro : BOOL;
+		MovePlane : BOOL;
 	END_STRUCT;
 	gShuttleIfCfgMacrosTyp : 	STRUCT  (*Structure of the macro IDs used for operation*)
 		RobotProcessMacro : gShuttleIfMacroEnum; (*Macro ID used for sending a shuttle from the load station to the print station*)
@@ -117,6 +119,11 @@ TYPE
 	gShuttleIfParTyp : 	STRUCT  (*Parameters for the shuttle's operation*)
 		NumLayers : USINT; (*Number of layers for this defined recipe*)
 		MacroIDs : gShuttleIfCfgMacrosTyp; (*Macro's used for routing shuttles*)
+		X : REAL;
+		Y : REAL;
+		Vel : REAL;
+		EndVel : REAL;
+		Accel : REAL;
 	END_STRUCT;
 	gShuttleIfConfigTyp : 	STRUCT  (*Configuration values for a shuttle*)
 		ShuttleId : USINT; (*ShuttleID of this shuttle*)
@@ -143,9 +150,9 @@ TYPE
 		SH_INIT, (*Shuttle is in the initilization state*)
 		SH_STARTUP, (*Shuttle is in the startup state*)
 		SH_IDLE, (*Shuttle is in the idle state after having been recovered*)
-		SH_MOVE_TO_ROBOT,
-		SH_ROBOT,
-		SH_OFFLOAD, (*Shuttle is currently being offloaded*)
+		SH_MOVE_PLANE,
+		SH_MOVE_MACRO,
+		SH_STOPPING,
 		SH_ERROR := 65535 (*Shuttle is in the error state*)
 		);
 	gShuttleIfStatusTyp : 	STRUCT  (*Status information for the shuttle*)
@@ -155,6 +162,7 @@ TYPE
 		ErrorState : ShStateEnum; (*State the shuttle errored at*)
 		Recovered : BOOL; (*Shuttle has been recovered*)
 		CyclicPositionX : REAL;
+		CyclicPositionY : REAL;
 	END_STRUCT;
 	gShuttleIfTyp : 	STRUCT  (*Interface for controlling a shuttle*)
 		Cmd : gShuttleIfCmdTyp; (*Commands to issue to a shuttle*)
@@ -201,6 +209,7 @@ TYPE
 		Homed : BOOL;
 		Powered : BOOL;
 		AtSync : BOOL;
+		Running : BOOL;
 	END_STRUCT;
 	SceneViewerTyp : 	STRUCT 
 		Cmds : SceneViewerCmdsTyp;

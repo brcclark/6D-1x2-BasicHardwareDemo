@@ -11,62 +11,92 @@ PROGRAM _CYCLIC
 				END_IF
 			SH_INIT:  //******************************************************************************** Shuttle is in the initilization state
 				//In this state we could make any checks on the current shuttle process perhaps in order to aide in recovery?
-				shFbs[i].ReadCyclicPos.Controller := ADR(gMcAcp6DController);
-				shFbs[i].ReadCyclicPos.ChannelID := i + 1;
-				shFbs[i].ReadCyclicPos.AxisID := 1;
-				shFbs[i].ReadCyclicPos.Enable := TRUE;
+				shFbs[i].ReadCyclicPosX.Controller := ADR(gMcAcp6DController);
+				shFbs[i].ReadCyclicPosX.ChannelID := i + 1;
+				shFbs[i].ReadCyclicPosX.AxisID := 1;
+				shFbs[i].ReadCyclicPosX.Enable := TRUE;
+				
+				shFbs[i].ReadCyclicPosY.Controller := ADR(gMcAcp6DController);
+				shFbs[i].ReadCyclicPosY.ChannelID := i + 1;
+				shFbs[i].ReadCyclicPosY.AxisID := 2;
+				shFbs[i].ReadCyclicPosY.Enable := TRUE;
 				
 				shState[i] := SH_STARTUP;
 			SH_STARTUP:  //******************************************************************************** Shuttle is in the startup state
 				//In this state maybe we have triggered recovery and we're waiting for the autodrive to complete
-				IF shFbs[i].ReadCyclicPos.Valid THEN
+				IF shFbs[i].ReadCyclicPosX.Valid AND shFbs[i].ReadCyclicPosY.Valid THEN
 					shState[i] := SH_IDLE;
 				END_IF
 			SH_IDLE:  //******************************************************************************** Shuttle is in the idle state
-				IF gShuttleIf[i].Cmd.NextStep THEN 
-					gShuttleIf[i].Cmd.NextStep := FALSE;
-					//Evaluate the current step to determine what the next step should be
+				IF gShuttleIf[i].Cmd.MovePlane THEN
+					shFbs[i].MovePlane.Controller := ADR(gMcAcp6DController);
+					shFbs[i].MovePlane.ShuttleID := gShuttleIf[i].Cfg.ShuttleId;
+					shFbs[i].MovePlane.PositionX := gShuttleIf[i].Par.X;
+					shFbs[i].MovePlane.PositionY := gShuttleIf[i].Par.Y;
+					shFbs[i].MovePlane.Velocity := gShuttleIf[i].Par.Vel;
+					shFbs[i].MovePlane.EndVelocity := gShuttleIf[i].Par.EndVel;
+					shFbs[i].MovePlane.Acceleration := gShuttleIf[i].Par.Accel;
+					shFbs[i].MovePlane.Execute := TRUE;
+					
+					shState[i] := SH_MOVE_PLANE;
+				ELSIF gShuttleIf[i].Cmd.MoveMacro THEN
 					shFbs[i].ShRunMacroFb.Controller := ADR(gMcAcp6DController);
-					shFbs[i].ShRunMacroFb.ShuttleID := gShuttleIf[i].Cfg.ShuttleId;
 					shFbs[i].ShRunMacroFb.MacroID := UDINT_TO_USINT(gShuttleIf[i].Par.MacroIDs.RobotProcessMacro);
+					shFbs[i].ShRunMacroFb.ShuttleID := gShuttleIf[i].Cfg.ShuttleId;
 					shFbs[i].ShRunMacroFb.Execute := TRUE;
-					gShuttleIf[i].Status.CurrentDestination := DEST_LOAD;
-					LogDebug(gAuditTrail,i,"Sent to Robot");
-									
-					shState[i] := SH_MOVE_TO_ROBOT;
+					
+					shState[i] := SH_MOVE_MACRO;
 				END_IF
-			SH_MOVE_TO_ROBOT:  //******************************************************************************** Shuttle is moving to the load position
-				IF shFbs[i].ShRunMacroFb.Error THEN
-					gShuttleIf[i].Status.Error := TRUE;
-					gShuttleIf[i].Status.ErrorState := shState[i];
+			SH_MOVE_PLANE:
+				IF shFbs[i].MovePlane.Error THEN
 					shState[i] := SH_ERROR;
-				ELSIF shFbs[i].ShRunMacroFb.Acknowledge AND gShuttleIf[i].Status.ShuttleInfo.Position.Value.Y <= 0.0601 THEN //Check to see if the shuttle is ready to sync with the robot
-					gLoadStationIf.Par.ShuttleIdx := i;
-					gLoadStationIf.Cmd.Process := TRUE;
-				
-					LogDebug(gAuditTrail,i,"Arrived at Robot");
+				ELSIF shFbs[i].MovePlane.Done THEN
+					gShuttleIf[i].Cmd.MovePlane := FALSE;
+					shFbs[i].MovePlane.Execute := FALSE;
 					
+					shState[i] := SH_IDLE;
+				ELSIF gShuttleIf[i].Cmd.Stop THEN
+					gShuttleIf[i].Cmd.MovePlane := FALSE;
+					shFbs[i].MovePlane.Execute := FALSE;
+					shFbs[i].Stop.Controller := ADR(gMcAcp6DController);
+					shFbs[i].Stop.ShuttleID := gShuttleIf[i].Cfg.ShuttleId;
+					shFbs[i].Stop.Execute := TRUE;
+					shState[i] := SH_STOPPING;
+				END_IF
+			SH_MOVE_MACRO:
+				IF shFbs[i].ShRunMacroFb.Error THEN
+					shState[i] := SH_ERROR;
+				ELSIF shFbs[i].ShRunMacroFb.Done OR gShuttleIf[i].Cmd.Stop THEN
+					gShuttleIf[i].Cmd.MoveMacro := FALSE;
 					shFbs[i].ShRunMacroFb.Execute := FALSE;
-					shState[i] := SH_ROBOT;
+					shFbs[i].Stop.Controller := ADR(gMcAcp6DController);
+					shFbs[i].Stop.ShuttleID := gShuttleIf[i].Cfg.ShuttleId;
+					shFbs[i].Stop.Execute := TRUE;
+					shState[i] := SH_STOPPING;
 				END_IF
-			SH_ROBOT:  //******************************************************************************** Shuttle is currently being loaded
-				//Station has control on the shuttle during this section
-				IF gShuttleIf[i].Cmd.NextStep THEN
-					gLoadStationIf.Cmd.Process := FALSE; //Respond to the Load station we're done
-				
-					gShuttleIf[i].Cmd.NextStep := FALSE;
-					gShuttleIf[i].Status.CurrentDestination := DEST_PRINT;
-				
-					LogDebug(gAuditTrail,i,"Finished with Robot");
-					
-					shState[i] := SH_MOVE_TO_ROBOT;
+			SH_STOPPING:
+				IF shFbs[i].Stop.Error THEN
+					shState[i] := SH_ERROR;
+				ELSIF shFbs[i].Stop.Done THEN
+					gShuttleIf[i].Cmd.Stop := FALSE;
+					shFbs[i].Stop.Execute := FALSE;
+					shState[i] := SH_IDLE;
 				END_IF
-		
 			SH_ERROR: //******************************************************************************** Shuttle is in the error state
 		
 		END_CASE;
 		shFbs[i].ShRunMacroFb();
-		shFbs[i].ReadCyclicPos();
+		shFbs[i].MovePlane();
+		shFbs[i].Stop();
+		shFbs[i].ReadCyclicPosX();
+		shFbs[i].ReadCyclicPosY();
+		IF shFbs[i].ReadCyclicPosX.Valid THEN
+			gShuttleIf[i].Status.CyclicPositionX := shFbs[i].ReadCyclicPosX.Value;
+		END_IF
+		IF shFbs[i].ReadCyclicPosY.Valid THEN
+			gShuttleIf[i].Status.CyclicPositionY := shFbs[i].ReadCyclicPosY.Value;
+		END_IF
+		
 		IF gShuttleIf[i].Cmd.ResetProductInfo THEN
 			gShuttleIf[i].Status.Error := FALSE;
 			gShuttleIf[i].Status.ErrorState := 0;

@@ -1,6 +1,7 @@
 
 
 PROGRAM _EXIT
-	(* Insert code here *)
+	RoboBasicFb.Enable := FALSE;
+	RoboBasicFb();
 	 
 END_PROGRAM
