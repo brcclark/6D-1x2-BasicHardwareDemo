@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.9.2.46 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
-  <Module Name="5AC901.IPLK-00" Type="5AC901.IPLK-00" Version="1.6.0.0">
+  <Module Name="5AC901.IPLK-00" Type="5AC901.IPLK-00" Version="1.7.1.0">
     <Connection Connector="SL" TargetModule="5APC3100_KBU3_000" TargetConnector="SL2" />
     <Connector Name="IF1">
       <Parameter ID="DNAConfiguration" Value="manual" />
       <Parameter ID="CycleTime" Value="400" />
     </Connector>
   </Module>
-  <Module Name="5APC3100_KBU3_000" Type="5APC3100.KBU3-000" Version="2.0.3.0">
+  <Module Name="5APC3100_KBU3_000" Type="5APC3100.KBU3-000" Version="2.2.0.0">
     <Connector Name="IF3">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
       <Parameter ID="ActivateDevice" Value="1" />
@@ -49,7 +49,7 @@
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>
-  <Module Name="8EI8X8MWT10.xxxx-1" Type="8EI8X8MWT10.xxxx-1" Version="2.3.0.2">
+  <Module Name="8EI8X8MWT10.xxxx-1" Type="8EI8X8MWT10.xxxx-1" Version="2.3.0.3">
     <Connection Connector="PLK2" TargetModule="5AC901.IPLK-00" TargetConnector="IF1" NodeNumber="1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>

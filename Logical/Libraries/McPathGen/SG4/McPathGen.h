@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* McPathGen 5.13.1 */
+/* McPathGen 5.13.2 */
 
 #ifndef _MCPATHGEN_
 #define _MCPATHGEN_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _McPathGen_VERSION
-#define _McPathGen_VERSION 5.13.1
+#define _McPathGen_VERSION 5.13.2
 #endif
 
 #include <bur/plctypes.h>

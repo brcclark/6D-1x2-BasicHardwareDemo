@@ -1,46 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="cntMain" height="740" width="1150" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Content id="cntMain" height="740" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.FlyOut" id="FlyOut1" top="500" left="0" width="150" zIndex="0" buttonOffset="120" text="Scene Viewer" buttonHeight="80" buttonWidth="25" textColor="rgba(255, 255, 255, 1)" textRotation="vertical">
+    <Widget xsi:type="widgets.brease.FlyOut" id="FlyOut1" top="0" left="0" width="150" zIndex="0" buttonOffset="5" buttonStyle="ContainedOnOff" docking="right" text="Scene Viewer" buttonHeight="140" buttonBorderStyle="none" buttonBorderWidth="0px 0px 0px 3px" buttonCornerRadius="8px 0px 0px 8px" textRotation="vertical" fontName="Roboto">
       <Widgets>
-        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRecordPath" top="20" left="10" zIndex="0" text="Record Path" backColor="rgba(192, 192, 192, 1)" textColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" fontSize="12px" bold="true" />
-        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="60" left="10" zIndex="1" text="Clear" backColor="rgba(192, 192, 192, 1)" textColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" fontSize="12px" bold="true" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRecordPath" top="20" left="10" zIndex="0" text="Record Path" backColor="rgba(192, 192, 192, 1)" textColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" fontSize="12px" bold="true" style="ContainedOnOff" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="60" left="10" zIndex="1" text="Clear" backColor="rgba(192, 192, 192, 1)" textColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" fontSize="12px" bold="true" style="Contained" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox1" top="12" left="18" width="362" height="178" zIndex="1" text="Main Cmds">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox1" top="40" left="59" width="460" height="320" zIndex="1" text="Main Cmds" textColor="rgba(0, 0, 0, 1)" fontName="Roboto" fontSize="18px" style="GroupBox1">
       <Widgets>
-        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbStart" top="18" left="226" zIndex="0" text="Run" />
-        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbStop" top="58" left="226" zIndex="1" text="Stop" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="tbPower" top="18" left="18" width="124" zIndex="2" text="Power" />
-        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbReset" top="98" left="226" zIndex="3" text="Reset" />
-        <Widget xsi:type="widgets.brease.TextOutput" id="toMainStatus" top="84" left="14" width="196" zIndex="4" textColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbStart" top="2" left="239" width="200" height="60" zIndex="0" text="Run" fontSize="16px" style="Contained" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbStop" top="82" left="239" width="200" height="60" zIndex="1" text="Stop" fontSize="16px" style="Contained" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbPower" top="81" left="19" width="200" height="60" zIndex="2" text="Power" fontSize="16px" style="ContainedOnOff" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbReset" top="162" left="239" width="200" height="60" zIndex="3" text="Reset" fontSize="16px" style="Contained" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="toMainStatus" top="243" left="-1" width="441" zIndex="4" textColor="rgba(0, 0, 0, 1)" style="Output" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox2" top="256" left="36" width="370" height="420" zIndex="2" text="Shuttles">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox2" top="400" left="59" width="460" height="320" zIndex="2" text="Shuttle 1" textColor="rgba(0, 0, 0, 1)" fontName="Roboto" fontSize="18px" style="GroupBox1">
       <Widgets>
-        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox3" top="6" left="20" width="322" height="202" zIndex="0" text="Shuttle 1" fontSize="14px" textAlign="left">
-          <Widgets>
-            <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbMovePlaneSh1" top="48" left="10" zIndex="0" text="Move" />
-            <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbRunMacroSh1" top="2" left="10" zIndex="1" text="Run Macro" />
-            <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbStopSh1" top="4" left="154" zIndex="2" text="Stop" />
-            <Widget xsi:type="widgets.brease.Label" id="Label1" top="48" left="120" width="16" zIndex="3" text="X:" textColor="rgba(0, 0, 64, 1)" />
-            <Widget xsi:type="widgets.brease.NumericInput" id="niShMoveX1" top="46" left="144" width="62" zIndex="4" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" fontSize="14px" padding="0px 5px 0px 5px" />
-            <Widget xsi:type="widgets.brease.Label" id="Label2" top="48" left="212" width="16" zIndex="5" text="Y:" textColor="rgba(0, 0, 64, 1)" />
-            <Widget xsi:type="widgets.brease.NumericInput" id="niShMoveY1" top="46" left="236" width="62" zIndex="6" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" fontSize="14px" padding="0px 5px 0px 5px" />
-            <Widget xsi:type="widgets.brease.ToggleButton" id="tbLandLevitate1" top="86" left="144" width="152" zIndex="7" mouseDownText="Levitate" text="Land" />
-            <Widget xsi:type="widgets.brease.TextOutput" id="toShStatus1" top="118" left="14" width="276" zIndex="8" textColor="rgba(0, 0, 0, 1)" />
-          </Widgets>
-        </Widget>
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbRunMacroSh1" top="3" left="20" width="200" height="60" zIndex="0" text="Run Macro" fontSize="16px" style="Contained" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbLandLevitate1" top="3" left="240" width="200" height="60" zIndex="1" mouseDownText="Levitate" text="Land" fontSize="16px" style="ContainedOnOff" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbMovePlaneSh1" top="82" left="20" width="200" height="60" zIndex="2" text="Move" fontSize="16px" style="Contained" />
+        <Widget xsi:type="widgets.brease.Label" id="Label1" top="103" left="239" width="16" zIndex="3" text="X:" textColor="rgba(0, 0, 64, 1)" fontSize="14px" padding="0px" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niShMoveX1" top="100" left="260" width="80" height="33" zIndex="4" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" fontSize="16px" padding="0px 5px 0px 5px" />
+        <Widget xsi:type="widgets.brease.Label" id="Label2" top="102" left="345" width="16" zIndex="5" text="Y:" textColor="rgba(0, 0, 64, 1)" fontSize="14px" padding="0px" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niShMoveY1" top="100" left="360" width="78" height="33" zIndex="6" format="{'metric':{'decimalPlaces':3,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" fontSize="16px" padding="0px 5px 0px 5px" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbStopSh1" top="163" left="20" width="200" height="60" zIndex="7" text="Stop" fontSize="16px" style="Contained" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="toShStatus1" top="243" left="0" width="341" zIndex="8" textColor="rgba(0, 0, 0, 1)" style="Output" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox4" top="20" left="492" width="540" height="142" zIndex="3" text="Robot Controls">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox4" top="40" left="580" width="460" height="320" zIndex="3" text="Robot Controls" textColor="rgba(0, 0, 0, 1)" fontName="Roboto" fontSize="18px" style="GroupBox1">
       <Widgets>
-        <Widget xsi:type="widgets.brease.Label" id="Label3" top="46" left="214" zIndex="0" text="Shuttle ID" textColor="rgba(0, 0, 0, 1)" />
-        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbPreformPickRoutine" top="38" left="372" width="162" zIndex="1" text="Pick Routine" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRunRobot" top="10" left="8" zIndex="2" text="Enable" />
-        <Widget xsi:type="widgets.brease.ToggleButton" id="tbSyncToShuttle" top="8" left="200" width="154" zIndex="3" text="Sync To Shuttle" />
-        <Widget xsi:type="widgets.brease.DropDownBox" id="ddbShuttleSelector" top="44" left="284" width="64" zIndex="4" dataProvider="[{'value':'0','text':'1'},{'value':'1','text':'2'}]" selectedValue="0" />
-        <Widget xsi:type="widgets.brease.TextOutput" id="toRobotState" top="72" left="6" width="276" zIndex="5" textColor="rgba(0, 0, 0, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label3" top="103" left="259" width="73" zIndex="0" text="Shuttle ID" textColor="rgba(0, 0, 0, 1)" padding="0px 0px 0px 0px" style="Body1" />
+        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbPreformPickRoutine" top="3" left="239" width="200" height="60" zIndex="1" text="Pick Routine" fontSize="16px" style="Contained" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbRunRobot" top="3" left="19" width="200" height="60" zIndex="2" text="Enable" fontSize="16px" style="ContainedOnOff" />
+        <Widget xsi:type="widgets.brease.ToggleButton" id="tbSyncToShuttle" top="83" left="19" width="200" height="60" zIndex="3" text="Sync To Shuttle" fontSize="16px" padding="0px 16px" style="ContainedOnOff" />
+        <Widget xsi:type="widgets.brease.DropDownBox" id="ddbShuttleSelector" top="83" left="359" width="80" height="60" zIndex="4" dataProvider="[{'value':'0','text':'1'},{'value':'1','text':'2'}]" selectedValue="0" fontSize="16px" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="toRobotState" top="243" left="-1" width="314" zIndex="5" textColor="rgba(0, 0, 0, 1)" style="Output" />
       </Widgets>
     </Widget>
   </Widgets>

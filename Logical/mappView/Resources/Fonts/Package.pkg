@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="FontsPackage" PackageType="FontsPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Fonts.fontscfg</Object>
+    <Object Type="File">Roboto-Black.ttf</Object>
+    <Object Type="File">Roboto-BlackItalic.ttf</Object>
+    <Object Type="File">Roboto-Bold.ttf</Object>
+    <Object Type="File">Roboto-BoldItalic.ttf</Object>
+    <Object Type="File">Roboto-Italic.ttf</Object>
+    <Object Type="File">Roboto-Light.ttf</Object>
+    <Object Type="File">Roboto-LightItalic.ttf</Object>
+    <Object Type="File">Roboto-Medium.ttf</Object>
+    <Object Type="File">Roboto-MediumItalic.ttf</Object>
+    <Object Type="File">Roboto-Regular.ttf</Object>
+    <Object Type="File">Roboto-Thin.ttf</Object>
+    <Object Type="File">Roboto-ThinItalic.ttf</Object>
+  </Objects>
+</Package>

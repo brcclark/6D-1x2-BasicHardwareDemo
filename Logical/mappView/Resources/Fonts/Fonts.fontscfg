@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Element ID="FontsConfiguration" Type="FONTSCFG">
+    <Property ID="FontFamily" Value="Roboto Light" />
+    <Property ID="FontName" Value="RobotoLight" />
+  </Element>
+  <Element ID="FontsConfiguration_1" Type="FONTSCFG">
+    <Property ID="FontFamily" Value="Roboto Medium" />
+    <Property ID="FontName" Value="RobotoMedium" />
+  </Element>
+  <Element ID="FontsConfiguration_2" Type="FONTSCFG">
+    <Property ID="FontFamily" Value="Roboto" />
+    <Property ID="FontName" Value="Roboto" />
+  </Element>
+</Configuration>
