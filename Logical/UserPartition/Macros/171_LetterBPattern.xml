@@ -1,0 +1,33 @@
+﻿<?xml version="0.5" encoding="utf-8"?>
+<Commands>
+	<Command id="1">
+		<Parameter Name="MacroClear" MacroID="171"/>
+	</Command>
+	<Command id="2">
+		<Parameter Name="MoveInPlane" ShuttleID="171" XTarget="0.03" YTarget="0.0" Acc="10" Vel="1" EndVel="0.0" PositionMode="1" PathType="0"/>
+	</Command>
+    <Command id="3">
+		<Parameter Name="MoveInPlane" ShuttleID="171" XTarget="0.00" YTarget="0.03" Acc="10" Vel="1" EndVel="0.0" PositionMode="1" PathType="0"/>
+	</Command>
+	<Command id="4">
+		<Parameter Name="MoveInPlane" ShuttleID="171" XTarget="0.015" YTarget="0.00" Acc="10" Vel="1" EndVel="0.0" PositionMode="1" PathType="0"/>
+	</Command>
+    <Command id="5">
+		<Parameter Name="MoveArcAngle" ShuttleID="171" XTarget="0.00" YTarget="-0.015" Acc="15" Vel="1" EndVel="1" PositionMode="1" Angle="3.14" Direction="0"/>
+	</Command>
+    <Command id="6">
+		<Parameter Name="MoveInPlane" ShuttleID="171" XTarget="-0.015" YTarget="0.00" Acc="10" Vel="1" EndVel="0.0" PositionMode="1" PathType="0"/>
+	</Command>
+    <Command id="7">
+		<Parameter Name="MoveInPlane" ShuttleID="171" XTarget="0.0" YTarget="-0.03" Acc="10" Vel="1" EndVel="0.0" PositionMode="1" PathType="0"/>
+	</Command>
+    <Command id="8">
+		<Parameter Name="MoveInPlane" ShuttleID="171" XTarget="0.015" YTarget="0.0" Acc="10" Vel="1" EndVel="0.0" PositionMode="1" PathType="0"/>
+	</Command>
+    <Command id="9">
+		<Parameter Name="MoveArcAngle" ShuttleID="171" XTarget="0.00" YTarget="0.015" Acc="15" Vel="1" EndVel="1" PositionMode="1" Angle="3.14" Direction="1"/>
+	</Command>
+	<Command id="10">
+		<Parameter Name="MacroSave" MacroID="171"/>
+	</Command>
+</Commands>
