@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExternalHardware>
+  <Modules>
+    <Module ModuleID="FBE.00000A1C_PlanarMotorIncorporatedPOWERLINK" Version="1.12.05" OrderNumber="Planar Motor Incorporated POWERLINK">
+      <SourceFile OriginalFile="00000A1C_PlanarMotorIncorporatedPOWERLINK.xdd" TranslationFile="Y9L6Y5ZV.ext" />
+    </Module>
+  </Modules>
+</ExternalHardware>

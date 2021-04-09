@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.9.2.46 FileVersion="4.9"?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="5AC901.BX01-00" Type="5AC901.BX01-00" Version="1.0.1.0">
+    <Connection Connector="SY" TargetModule="5PC910.SX01-00" TargetConnector="SY3" />
+  </Module>
+  <Module Name="5LS182.6-1" Type="5LS182.6-1" Version="1.3.1.0">
+    <Connection Connector="SL" TargetModule="5AC901.BX01-00" TargetConnector="SL1" />
+  </Module>
+  <Module Name="5PC900_TS17_00" Type="5PC900.TS17-00" Version="2.1.0.0">
+    <Connection Connector="SY" TargetModule="5PC910.SX01-00" TargetConnector="SY1" />
+  </Module>
+  <Module Name="5PC910.SX01-00" Type="5PC910.SX01-00" Version="2.1.0.0">
+    <Connector Name="IF1">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF3">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+      <Parameter ID="ActivateDevice" Value="1" />
+    </Connector>
+    <Connector Name="IF4">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+      <Parameter ID="ActivateDevice" Value="1" />
+    </Connector>
+    <Connector Name="IF5">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF6">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF7">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF8">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+    <Connector Name="IF9">
+      <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
+    </Connector>
+  </Module>
+  <Module Name="ACOPOS6D_POWERLINK" Type="FBE.00000A1C_PlanarMotorIncorporatedPOWERLINK" Version="1.12.05" OrderNumber="Planar Motor Incorporated POWERLINK">
+    <Connection Connector="PLK1" TargetModule="5LS182.6-1" TargetConnector="IF1" NodeNumber="1">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Parameter ID="Supervision" Value="off" />
+  </Module>
+</Hardware>

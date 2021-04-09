@@ -3,19 +3,13 @@ VAR CONSTANT
 	MAX_SHUTTLE_COUNT : USINT := 8; (*Maximum count of shuttles allowed in the system*)
 	MAX_SHUTTLE_COUNT_ARRAY : USINT := MAX_SHUTTLE_COUNT-1; (*Maximum count of shuttles - 1 (used for array declaration)*)
 	STATION_IS_EMPTY : USINT := 255; (*Index that denotes that a station is empty and available*)
-	NUM_DOSE_STATIONS : USINT := 2; (*Number of dosing stations in the system*)
-	NUM_DOSE_STATIONS_ARRAY : USINT := NUM_DOSE_STATIONS-1; (*Number of dosing stations in the system - 1 (used for array declaration)*)
 END_VAR
 (*Global Interfaces*)
 VAR
 	gShuttleIf : ARRAY[0..1] OF gShuttleIfTyp; (*Interface(s) to control shuttles in the system*)
 	gAcp6DCtrlIf : Acp6DCtrlType; (*Interface to control the 6D system as a whole*)
 	gMainIf : MainIfTyp := (Cfg:=(ShuttleCount:=1)); (*Main interface to control the system*)
-	gLoadStationIf : LoadStationIfTyp; (*Interface to control the load station*)
 	g6DRecoveryIf : Acp6DRecoveryIfTyp; (*Interface to control the recover process*)
 	gProcessInfoIf : ProcessInfoIfTyp; (*Interface to display process related information*)
-	gSyncIf : SyncSecIfTyp;
-	gRobotIf : RobotIfTyp;
-	gPickPlaceIf : RobotPickPlaceTyp;
 	gSceneViewerIf : SceneViewerTyp;
 END_VAR

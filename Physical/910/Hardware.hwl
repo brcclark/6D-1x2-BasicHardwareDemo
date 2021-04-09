@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="910.Hardware.hw" LastWriteTime="04/09/2021 08:24:09" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="5PC910.SX01-00" Type="5PC910.SX01-00" X="68" Y="90" />
+    <Module Name="5AC901.BX01-00" Type="5AC901.BX01-00" X="99.7" Y="123" />
+    <Module Name="5LS182.6-1" Type="5LS182.6-1" X="104.7" Y="136" />
+    <Module Name="5PC900_TS17_00" Type="5PC900.TS17-00" X="99.7" Y="100" />
+    <Module Name="ACOPOS6D_POWERLINK" Type="FBE.00000A1C_PlanarMotorIncorporatedPOWERLINK" X="362" Y="224" />
+  </Modules>
+  <Links>
+    <Link From="ACOPOS6D_POWERLINK" To="5LS182.6-1" FromPort="PLK1" ToPort="IF1" IsRoutedByUser="False">
+      <Point X="395" Y="268" />
+      <Point X="395" Y="268" />
+      <Point X="395" Y="275" />
+      <Point X="395" Y="285" />
+      <Point X="355" Y="285" />
+      <Point X="355" Y="144" />
+      <Point X="155.7" Y="144" />
+      <Point X="145.7" Y="144" />
+      <Point X="145.7" Y="144" />
+    </Link>
+  </Links>
+  <InfoElements />
+</BR.AS.HardwareTopology>

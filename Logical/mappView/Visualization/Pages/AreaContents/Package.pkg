@@ -5,5 +5,6 @@
     <Object Type="File">cntNav.content</Object>
     <Object Type="File">cntMain.content</Object>
     <Object Type="File">cntInfo.content</Object>
+    <Object Type="File">cntMacro.content</Object>
   </Objects>
 </Package>

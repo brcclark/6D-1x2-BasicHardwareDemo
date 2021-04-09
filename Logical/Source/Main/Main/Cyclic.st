@@ -8,12 +8,11 @@ PROGRAM _CYCLIC
 		MAIN_OFF: //******************************************************************************** Main Off State
 			IF gMainIf.Cmd.Power THEN
 				gAcp6DCtrlIf.Cmd.Power := TRUE;
-				gRobotIf.Cmds.Admin.Power := TRUE;
 				
 				state := MAIN_INIT;
 			END_IF
 		MAIN_INIT: //******************************************************************************** Main Initializing State
-			IF gAcp6DCtrlIf.Status.PowerOn AND gAcp6DCtrlIf.Status.Ready AND gRobotIf.Status.Powered THEN
+			IF gAcp6DCtrlIf.Status.PowerOn AND gAcp6DCtrlIf.Status.Ready THEN
 				gMainIf.Status.PowerOn := TRUE;
 				g6DRecoveryIf.Cmd.Recover := TRUE;
 				
@@ -31,20 +30,14 @@ PROGRAM _CYCLIC
 		MAIN_READY://******************************************************************************** Main Ready State
 			IF gMainIf.Cmd.Start THEN
 				gProcessInfoIf.Cmd.Enable := TRUE;
-				gRobotIf.Cmds.Process.Run := TRUE;
 				
-				state := MAIN_STARTING_ROBOT;
+				state := MAIN_STARTING;
 			ELSIF NOT gMainIf.Cmd.Power THEN
 				gMainIf.Status.PowerOn := FALSE;
 				gAcp6DCtrlIf.Cmd.Power := FALSE;
 				state := MAIN_OFF;
 			END_IF
-		MAIN_STARTING_ROBOT:
-			IF gRobotIf.Status.Running THEN
-				CmdShEnable(TRUE, ADR(gShuttleIf), gMainIf.Cfg.ShuttleCount);
-				state := MAIN_STARTING;
-			END_IF
-			
+					
 		MAIN_STARTING://******************************************************************************** Main Starting State
 			
 			gMainIf.Cmd.Start := FALSE;

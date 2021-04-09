@@ -1,7 +1,0 @@
-VAR
-	RoboBasicFb : MpDelta3Axis;
-	deltaPars : MpDelta3AxisParType := (ProgramName:='Demo.gcode');
-	state : RobotStatesEnum;
-	getCoordSystemIdent : MC_BR_GetCoordSystemIdent;
-	OnlinePath : MC_BR_OnlinePathInfluence_15;
-END_VAR

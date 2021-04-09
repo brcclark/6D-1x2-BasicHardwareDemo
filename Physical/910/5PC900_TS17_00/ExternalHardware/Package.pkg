@@ -2,6 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
-    <Object Type="Program" Language="IEC">RbtCtrl</Object>
+    <Object Type="File">ExternalHardwareDevices.xml</Object>
+    <Object Type="File">Y9L6Y5ZV.ext</Object>
   </Objects>
 </Package>
