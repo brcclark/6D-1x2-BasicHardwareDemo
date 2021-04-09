@@ -1,0 +1,5 @@
+VAR
+	state : MacroDemoStateEnum;
+	macroDemoIf : MacroDemoIfTyp;
+	demoFbs : MacroDemoFbsTyp;
+END_VAR

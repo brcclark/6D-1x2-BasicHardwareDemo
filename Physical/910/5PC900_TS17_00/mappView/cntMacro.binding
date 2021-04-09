@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="cntMacro_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MacroDemo:macroDemoIf.Par.ShId" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMacro" widgetRefId="niShuttleID" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MacroDemo:macroDemoIf.Cmd.Run" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMacro" widgetRefId="pbRunDemo" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MacroDemo:macroDemoIf.Par.MacroFileName" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMacro" widgetRefId="tiMacroFileName" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::MacroDemo:macroDemoIf.Par.MacroId" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntMacro" widgetRefId="niMacroId" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

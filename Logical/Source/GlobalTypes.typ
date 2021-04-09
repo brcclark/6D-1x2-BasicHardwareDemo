@@ -308,84 +308,47 @@ TYPE
 END_TYPE
 
 (***********************Station Types*)
-(*Load Station Types*)
 
 TYPE
-	LoadStationIfTyp : 	STRUCT 
-		Cmd : LoadStationCmdTyp; (*Commands to the station*)
-		Par : LoadStationParTyp; (*Paramters for the station's operation*)
-		Cfg : LoadStationCfgTyp; (*Configuration values for the station*)
-		Status : LoadStationStatusTyp; (*Status of the station*)
+	StationIfTyp : 	STRUCT 
+		Cmd : StationIfCmdTyp; (*Commands to a station*)
+		Par : {REDUND_UNREPLICABLE} StationIfParTyp; (*Parameters for the station's operation*)
+		Cfg : StationIfCfgTyp; (*Configuration values for the station*)
+		Sts : StationIfStsTyp; (*Status of the station*)
 	END_STRUCT;
-	LoadStationCmdTyp : 	STRUCT 
+	StationIfCmdTyp : 	STRUCT 
 		Enable : BOOL; (*Enables the process station*)
 		Process : BOOL; (*Start a process for the station with the defined shuttle index*)
 		Reset : BOOL; (*Resets the process from an any state*)
+		LocalOverride : BOOL; (*Denotes that local settings can be overwritten from global*)
 	END_STRUCT;
-	LoadStationParTyp : 	STRUCT 
-		ShuttleIdx : USINT; (*Index in the gShuttle array for the shuttle in question*)
-		WaitTime : TIME; (*Amount of time to wait for the load process*)
-	END_STRUCT;
-	LoadStationCfgTyp : 	STRUCT 
+	StationIfCfgTyp : 	STRUCT 
 		StationPos : StationPositionTyp; (*Station's center world position*)
 	END_STRUCT;
-	LoadStationStatusTyp : 	STRUCT 
+	StationIfParTyp : 	STRUCT 
+		ShuttleIdx : USINT; (*Index in the gShuttle array for the shuttle in question*)
+		RepeatCount : USINT;
+		RepeatForever : BOOL;
+		StationType : FillStationEnum;
+	END_STRUCT;
+	StationIfStsTyp : 	STRUCT 
 		Enabled : BOOL; (*Signal denoting the station is enabled and in an operational state*)
 		Processing : BOOL; (*Signal denoting the station is currently operating on a shuttle*)
 		Done : BOOL; (*Signal denoting the current operation has completed*)
 		ReadyForNewShuttle : BOOL; (*Signal denoting the station is ready for a new shuttle*)
 		Error : BOOL; (*Signal denoting the station has an error present*)
+		RepeatCounter : USINT;
 	END_STRUCT;
 	StationPositionTyp : 	STRUCT 
 		X : REAL; (*Station's Global X position*)
 		Y : REAL; (*Station's Global Y position*)
 	END_STRUCT;
-END_TYPE
-
-(*Pick Place Types*)
-
-TYPE
-	posTyp : 	STRUCT 
-		X : LREAL;
-		Y : LREAL;
-		Z : LREAL;
-	END_STRUCT;
-	RobotPickPlaceParsTyp : 	STRUCT 
-		PickTune : pickTuneTyp;
-		PlaceTune : pickTuneTyp;
-		ReadyPos : posTyp;
-		ProductSpeed : robotSpeedTyp;
-		EmptySpeed : robotSpeedTyp;
-	END_STRUCT;
-	pickTuneTyp : 	STRUCT 
-		ApproachHeight : LREAL;
-		DepartHeight : LREAL;
-		XTune : LREAL;
-		YTune : LREAL;
-		ZTune : LREAL;
-		Radius : LREAL;
-		DwellTime : REAL;
-	END_STRUCT;
-	robotSpeedTyp : 	STRUCT 
-		Vel : REAL;
-		Accel : REAL;
-		Decel : REAL;
-	END_STRUCT;
-	RobotPickPlaceStatusTyp : 	STRUCT 
-		ProductOK : BOOL;
-		ProductPresent : BOOL;
-		AtSync : BOOL;
-	END_STRUCT;
-	RobotPickPlaceCfgTyp : 	STRUCT 
-		PlaceLoc : posTyp;
-		PickLoc : posTyp;
-		SyncLoc : posTyp;
-	END_STRUCT;
-	RobotPickPlaceTyp : 	STRUCT 
-		Run : BOOL;
-		Sync : BOOL;
-		Config : RobotPickPlaceCfgTyp;
-		Pars : RobotPickPlaceParsTyp;
-		Status : RobotPickPlaceStatusTyp;
-	END_STRUCT;
+	FillStationEnum : 
+		(
+		ST_UNDEF,
+		ST1,
+		ST2,
+		ST3,
+		ST4
+		);
 END_TYPE

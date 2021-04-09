@@ -5,24 +5,27 @@
       <Widgets>
         <Widget xsi:type="widgets.brease.NumericInput" id="niShuttleID" top="21" left="221" width="55" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="200" padding="0px 15px 0px 0px" />
         <Widget xsi:type="widgets.brease.Label" id="Label3" top="21" left="55" zIndex="1" text="Shuttle ID" fontSize="14px" />
-        <Widget xsi:type="widgets.brease.MomentaryPushButton" id="mpbStart1" top="215" left="97" width="200" height="60" zIndex="2" text="Run" fontSize="16px" style="Contained" />
-        <Widget xsi:type="widgets.brease.GroupBox" id="gbMacroID" top="91" left="13" width="111" height="80" zIndex="3" text="Macro ID">
+        <Widget xsi:type="widgets.brease.GroupBox" id="gbMacroID" top="91" left="13" width="111" height="80" zIndex="2" text="Macro ID">
           <Widgets>
-            <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="3" left="17" width="55" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="200" minValue="128" value="128" padding="0px 15px 0px 0px" />
+            <Widget xsi:type="widgets.brease.NumericInput" id="niMacroId" top="3" left="17" width="55" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="200" minValue="128" value="128" padding="0px 15px 0px 0px" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.GroupBox" id="gbMacroFileName" top="91" left="165" width="220" height="102" zIndex="4" text="Macro File Name">
+        <Widget xsi:type="widgets.brease.GroupBox" id="gbMacroFileName" top="91" left="165" width="220" height="102" zIndex="3" text="Macro File Name">
           <Widgets>
-            <Widget xsi:type="widgets.brease.TextInput" id="TextInput1" top="13" left="9" width="199" zIndex="0" />
+            <Widget xsi:type="widgets.brease.TextInput" id="tiMacroFileName" top="13" left="9" width="199" zIndex="0" />
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="55" left="19" width="351" zIndex="5" childPositioning="relative">
+        <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="55" left="19" width="351" zIndex="4" childPositioning="relative">
           <Widgets>
-            <Widget xsi:type="widgets.brease.RadioButton" id="RadioButton1" top="0" left="15" zIndex="0" text="ID" />
-            <Widget xsi:type="widgets.brease.RadioButton" id="RadioButton2" top="0" left="50" zIndex="1" text="File Name" />
+            <Widget xsi:type="widgets.brease.RadioButton" id="rbModeID" top="0" left="15" zIndex="0" text="ID" style="Caption" />
+            <Widget xsi:type="widgets.brease.RadioButton" id="rbModeFile" top="0" left="50" zIndex="1" text="File Name" value="true" style="Caption" />
           </Widgets>
         </Widget>
+        <Widget xsi:type="widgets.brease.PushButton" id="pbRunDemo" top="227" left="75" width="223" height="57" zIndex="5" text="Run" style="Contained" />
       </Widgets>
     </Widget>
+    <Widget xsi:type="widgets.brease.TextPad" id="tpMacro" top="36" left="530" width="548" height="624" zIndex="1" />
+    <Widget xsi:type="widgets.brease.Button" id="btnOpenBrowse" top="692" left="686" zIndex="2" text="Open" style="Contained" />
+    <Widget xsi:type="widgets.brease.Button" id="btnSave" top="692" left="942" zIndex="3" text="Save" style="Contained" />
   </Widgets>
 </Content>

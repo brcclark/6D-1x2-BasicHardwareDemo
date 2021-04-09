@@ -1,0 +1,10 @@
+VAR
+	state : ARRAY[0..1] OF FillStationStateEnum;
+	stationFbs : ARRAY[0..1] OF FillStationFbTyp;
+	taskName : STRING[80];
+	stationPars : {REDUND_UNREPLICABLE} FillStationParsTyp;
+	station : FillStationEnum;
+	macroPatternCounter : USINT;
+	repeatCounter : USINT;
+	i : INT;
+END_VAR

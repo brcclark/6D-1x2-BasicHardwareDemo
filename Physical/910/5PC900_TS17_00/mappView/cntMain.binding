@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="cntMain_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+	
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSceneViewerIf.Cmds.Clear" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="MomentaryPushButton1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gSceneViewerIf.Cmds.Record" attribute="value" samplingRate="slow" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbRecordPath" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMainIf.Cmd.Stop" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbStop" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMainIf.Cmd.Start" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbStart" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMainIf.Cmd.Power" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbPower" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gMainIf.Cmd.Reset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbReset" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Cmd.Stop" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbStopSh1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Cmd.MoveMacro" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbRunMacroSh1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Cmd.MovePlane" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="mpbMovePlaneSh1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Par.Y" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="niShMoveY1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Par.X" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="niShMoveX1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gShuttleIf[0].Cmd.Land" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="tbLandLevitate1" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::Main:state" attribute="value" />
+			<Target xsi:type="snippet" refId="MainIfState" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="snippet" refId="MainIfState" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="toMainStatus" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::ShCtrl:shState[0]" attribute="value" />
+			<Target xsi:type="snippet" refId="ShuttleIfState1" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="snippet" refId="ShuttleIfState1" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntMain" widgetRefId="toShStatus1" attribute="value" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

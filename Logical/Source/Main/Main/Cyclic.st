@@ -30,6 +30,8 @@ PROGRAM _CYCLIC
 		MAIN_READY://******************************************************************************** Main Ready State
 			IF gMainIf.Cmd.Start THEN
 				gProcessInfoIf.Cmd.Enable := TRUE;
+				gVariedMoveDemoIf[0].Cmd.Enable := TRUE;
+				gVariedMoveDemoIf[1].Cmd.Enable := TRUE;
 				
 				state := MAIN_STARTING;
 			ELSIF NOT gMainIf.Cmd.Power THEN
@@ -42,8 +44,7 @@ PROGRAM _CYCLIC
 			
 			gMainIf.Cmd.Start := FALSE;
 			state := MAIN_RUNNING;
-			
-			
+						
 		MAIN_RUNNING: //******************************************************************************** Main Running State
 			IF gMainIf.Cmd.Stop THEN
 				

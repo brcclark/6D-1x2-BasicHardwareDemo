@@ -12,4 +12,5 @@ VAR
 	g6DRecoveryIf : Acp6DRecoveryIfTyp; (*Interface to control the recover process*)
 	gProcessInfoIf : ProcessInfoIfTyp; (*Interface to display process related information*)
 	gSceneViewerIf : SceneViewerTyp;
+	gVariedMoveDemoIf : {REDUND_UNREPLICABLE} ARRAY[0..1] OF StationIfTyp := [2((0))];
 END_VAR

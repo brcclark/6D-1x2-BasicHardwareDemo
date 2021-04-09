@@ -5,6 +5,7 @@
     <Object Type="File" Private="true">GlobalVars.var</Object>
     <Object Type="File" Private="true">GlobalTypes.typ</Object>
     <Object Type="Package" Description="Package that contains code for controlling individual shuttles">ShuttleCtrl</Object>
+    <Object Type="Package">Demos</Object>
     <Object Type="Package" Description="Package that contains the main entry point to the machine">Main</Object>
     <Object Type="Package" Description="Package containing the main logic for controlling the 6D system as a whole">6DCtrl</Object>
     <Object Type="Package">Auxil</Object>

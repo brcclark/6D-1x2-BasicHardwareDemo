@@ -1,0 +1,48 @@
+﻿<?xml version="0.01" encoding="utf-8"?>
+<Commands>
+	<Command id="1">
+		<Parameter Name="MacroClear" MacroID="140"/>
+	</Command>
+	<Command id="2">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="0.005" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="3">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="-0.010" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="4">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="0.015" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="5">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="-0.020" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="6">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="0.025" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="7">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="-0.030" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="8">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="0.030" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="8">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="-0.030" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="9">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="0.025" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="10">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="-0.020" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="11">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="0.015" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="12">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="-0.010" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="13">
+		<Parameter Name="MoveArcAngle" ShuttleID="140" XTarget="0.005" YTarget="0.0" Acc="15" Vel="0.4" EndVel="0.4" PositionMode="1" Angle="3.1415" Direction="1"/>
+	</Command>
+	<Command id="14">
+		<Parameter Name="MacroSave" MacroID="140"/>
+	</Command>
+</Commands>

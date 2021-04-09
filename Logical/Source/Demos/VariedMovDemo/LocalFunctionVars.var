@@ -1,0 +1,12 @@
+VAR CONSTANT
+	axPosX : USINT := 0;
+	axPosY : USINT := 1;
+	axPosZ : USINT := 2;
+	axPosRX : USINT := 3;
+	axPosRY : USINT := 4;
+	axPosRZ : USINT := 5;
+	axVel : USINT := 0;
+	axVelRx : USINT := 1;
+	axVelRy : USINT := 2;
+	axVelRz : USINT := 3;
+END_VAR
