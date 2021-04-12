@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="cntVarriedMovement" height="740" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Content id="cntVariedMovement" height="740" width="1130" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox3" top="58" left="44" width="392" height="362" zIndex="0" text="Macros" textColor="rgba(0, 0, 0, 1)" fontName="Roboto" fontSize="18px" style="GroupBox1">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox3" top="54" left="98" width="392" height="406" zIndex="0" text="Segment 1" textColor="rgba(0, 0, 0, 1)" fontName="Roboto" fontSize="18px" style="GroupBox1">
       <Widgets>
-        <Widget xsi:type="widgets.brease.NumericInput" id="niShuttleID" top="21" left="221" width="55" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="200" padding="0px 15px 0px 0px" />
-        <Widget xsi:type="widgets.brease.Label" id="Label3" top="21" left="55" zIndex="1" text="Shuttle ID" fontSize="14px" />
-        <Widget xsi:type="widgets.brease.GroupBox" id="gbMacroID" top="91" left="13" width="111" height="80" zIndex="2" text="Macro ID">
-          <Widgets>
-            <Widget xsi:type="widgets.brease.NumericInput" id="niMacroId" top="3" left="17" width="55" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="200" minValue="128" value="128" padding="0px 15px 0px 0px" />
-          </Widgets>
-        </Widget>
-        <Widget xsi:type="widgets.brease.GroupBox" id="gbMacroFileName" top="91" left="165" width="220" height="102" zIndex="3" text="Macro File Name">
-          <Widgets>
-            <Widget xsi:type="widgets.brease.TextInput" id="tiMacroFileName" top="13" left="9" width="199" zIndex="0" />
-          </Widgets>
-        </Widget>
-        <Widget xsi:type="widgets.brease.ButtonBar" id="ButtonBar1" top="55" left="19" width="351" zIndex="4" childPositioning="relative">
-          <Widgets>
-            <Widget xsi:type="widgets.brease.RadioButton" id="rbModeID" top="0" left="15" zIndex="0" text="ID" style="Caption" />
-            <Widget xsi:type="widgets.brease.RadioButton" id="rbModeFile" top="0" left="50" zIndex="1" text="File Name" value="true" style="Caption" />
-          </Widgets>
-        </Widget>
-        <Widget xsi:type="widgets.brease.PushButton" id="pbRunDemo" top="227" left="75" width="223" height="57" zIndex="5" text="Run" style="Contained" />
+        <Widget xsi:type="widgets.brease.Label" id="Label3" top="21" left="55" zIndex="0" text="Shuttle ID" fontSize="14px" />
+        <Widget xsi:type="widgets.brease.PushButton" id="pbRunProcessSt1" top="227" left="75" width="223" height="57" zIndex="1" text="Run" style="Contained" />
+        <Widget xsi:type="widgets.brease.DropDownBox" id="ddbShuttleId" top="15" left="245" zIndex="2" dataProvider="[{'value':'0','text':'1'},{'value':'1','text':'2'}]" selectedValue="0" />
+        <Widget xsi:type="widgets.brease.Label" id="Label4" top="59" left="55" width="125" zIndex="3" text="Movement Type" fontSize="14px" />
+        <Widget xsi:type="widgets.brease.DropDownBox" id="ddbMovementTypeSt1" top="53" left="225" width="139" zIndex="4" dataProvider="[{'value':'0','text':'Undef'},{'value':'1','text':'Angled Square'},{'value':'2','text':'Spiral'},{'value':'3','text':'Wobble'},{'value':'4','text':'Z Travel'}]" selectedIndex="1" selectedValue="1" />
+        <Widget xsi:type="widgets.brease.Label" id="Label5" top="107" left="45" width="125" zIndex="5" text="Repeat Count" fontSize="14px" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niRepeatCount1" top="107" left="233" zIndex="6" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.ToggleSwitch" id="tsRepeatForeverSt1" top="173" left="72" width="222" zIndex="7" mouseDownText="Repeat Indefinite On" text="Repeat Indefinite Off" />
+        <Widget xsi:type="widgets.brease.PushButton" id="pbResetProcessSt1" top="295" left="75" width="223" height="57" zIndex="8" text="Reset" style="Contained" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.TextPad" id="tpMacro" top="36" left="530" width="548" height="624" zIndex="1" />
-    <Widget xsi:type="widgets.brease.Button" id="btnOpenBrowse" top="692" left="686" zIndex="2" text="Open" style="Contained" />
-    <Widget xsi:type="widgets.brease.Button" id="btnSave" top="692" left="942" zIndex="3" text="Save" style="Contained" />
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBox4" top="52" left="664" width="392" height="406" zIndex="1" text="Segment 2" textColor="rgba(0, 0, 0, 1)" fontName="Roboto" fontSize="18px" style="GroupBox1">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.Label" id="Label6" top="21" left="55" zIndex="0" text="Shuttle ID" fontSize="14px" />
+        <Widget xsi:type="widgets.brease.PushButton" id="pbRunProcessSt2" top="227" left="75" width="223" height="57" zIndex="1" text="Run" style="Contained" />
+        <Widget xsi:type="widgets.brease.DropDownBox" id="ddbShuttleId1" top="15" left="245" zIndex="2" dataProvider="[{'value':'0','text':'1'},{'value':'1','text':'2'}]" selectedValue="0" />
+        <Widget xsi:type="widgets.brease.Label" id="Label7" top="59" left="55" width="125" zIndex="3" text="Movement Type" fontSize="14px" />
+        <Widget xsi:type="widgets.brease.DropDownBox" id="ddbMovementTypeSt2" top="53" left="225" width="139" zIndex="4" dataProvider="[{'value':'0','text':'Undef'},{'value':'1','text':'Angled Square'},{'value':'2','text':'Spiral'},{'value':'3','text':'Wobble'},{'value':'4','text':'Z Travel'}]" selectedIndex="1" selectedValue="1" />
+        <Widget xsi:type="widgets.brease.Label" id="Label8" top="107" left="45" width="125" zIndex="5" text="Repeat Count" fontSize="14px" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="niRepeatCount2" top="107" left="233" zIndex="6" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" />
+        <Widget xsi:type="widgets.brease.ToggleSwitch" id="tsRepeatForeverSt2" top="173" left="72" width="222" zIndex="7" mouseDownText="Repeat Indefinite On" text="Repeat Indefinite Off" />
+        <Widget xsi:type="widgets.brease.PushButton" id="pbResetProcessSt2" top="295" left="75" width="223" height="57" zIndex="8" text="Reset" style="Contained" />
+      </Widgets>
+    </Widget>
   </Widgets>
 </Content>

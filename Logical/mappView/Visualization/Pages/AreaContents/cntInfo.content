@@ -2,7 +2,8 @@
 <Content id="cntInfo" height="740" width="150" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="2" left="-32" width="240" height="760" zIndex="0" image="Media/6D.jpg" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="navMain" top="12" left="22" zIndex="1" pageId="pgMain" text="Main" />
-    <Widget xsi:type="widgets.brease.NavigationButton" id="navMacros" top="50" left="22" zIndex="2" pageId="pgMacro" text="Macros" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="navMain" top="12" left="22" width="106" zIndex="1" pageId="pgMain" text="Main" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="navMacros" top="50" left="22" width="106" zIndex="2" pageId="pgMacro" text="Macros" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="navVariedMoves" top="88" left="22" width="106" zIndex="3" pageId="pgVariedMovement" text="Var Moves" />
   </Widgets>
 </Content>

@@ -1,5 +1,8 @@
 
 FUNCTION_BLOCK AngledMovementFb
+	IF Reset THEN
+		Internal.state := ANG_INT_RESET;
+	END_IF
 	CASE Internal.state OF
 		ANG_INT_OFF:
 			IF Execute THEN
@@ -140,25 +143,22 @@ FUNCTION_BLOCK AngledMovementFb
 			
 		ANG_INT_DONE:
 			IF NOT Execute THEN
-				Internal.Fbs.Move6DFb.Execute := FALSE;
-				Internal.MovementNum := 0;
-				
-				Active := FALSE;
-				Done := FALSE;
-				Error := FALSE;
-				
-				Internal.state := ANG_INT_OFF;
+				Internal.state := ANG_INT_RESET;
 			END_IF
+		ANG_INT_RESET:
+			Internal.Fbs.Move6DFb.Execute := FALSE;
+			Execute := FALSE;
+			Reset := FALSE;
+			Internal.MovementNum := 0;
+				
+			Active := FALSE;
+			Done := FALSE;
+			Error := FALSE;
+				
+			Internal.state := ANG_INT_OFF;
 		ANG_INT_ERROR:
-			IF NOT Execute THEN
-				Internal.Fbs.Move6DFb.Execute := FALSE;
-				Internal.MovementNum := 0;
-				
-				Active := FALSE;
-				Done := FALSE;
-				Error := FALSE;
-				
-				Internal.state := ANG_INT_OFF;
+			IF NOT Execute OR Reset THEN
+				Internal.state := ANG_INT_RESET;
 			END_IF
 	END_CASE;
 	Internal.Fbs.Move6DFb();

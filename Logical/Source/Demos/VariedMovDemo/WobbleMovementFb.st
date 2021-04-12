@@ -7,6 +7,9 @@ FUNCTION_BLOCK WobbleMovementFb
 	//When Virtual macro finishes, issue stop command to Real
 	//Move6D to real shuttle
 	//Exit Sun/Planet
+	IF Reset THEN
+		Internal.state := WOB_INT_RESET;
+	END_IF
 	CASE Internal.state OF
 		WOB_INT_OFF:
 			IF Execute THEN
@@ -96,26 +99,23 @@ FUNCTION_BLOCK WobbleMovementFb
 			END_IF
 		WOB_INT_DONE:
 			IF NOT Execute THEN
-								
-				Active := FALSE;
-				Done := FALSE;
-				Error := FALSE;
-				
-				Internal.state := WOB_INT_OFF;
+				Internal.state := WOB_INT_RESET;
 			END_IF
+		WOB_INT_RESET:
+			Internal.Fbs.PlanetCtrlFb.Execute := FALSE;
+			Internal.Fbs.RealMacroFb.Execute := FALSE;
+			Internal.Fbs.VirtualMacroFb.Execute := FALSE;
+			Internal.Fbs.StopFb.Execute := FALSE;
+			Internal.Fbs.Move6DFb.Execute := FALSE;
+								
+			Active := FALSE;
+			Done := FALSE;
+			Error := FALSE;
+			
+			Internal.state := WOB_INT_OFF;
 		WOB_INT_ERROR:
 			IF NOT Execute THEN
-				Internal.Fbs.PlanetCtrlFb.Execute := FALSE;
-				Internal.Fbs.RealMacroFb.Execute := FALSE;
-				Internal.Fbs.VirtualMacroFb.Execute := FALSE;
-				Internal.Fbs.StopFb.Execute := FALSE;
-				Internal.Fbs.Move6DFb.Execute := FALSE;
-								
-				Active := FALSE;
-				Done := FALSE;
-				Error := FALSE;
-				
-				Internal.state := WOB_INT_OFF;
+				Internal.state := WOB_INT_RESET;
 			END_IF
 	END_CASE;
 	Internal.Fbs.PlanetCtrlFb();

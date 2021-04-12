@@ -9,6 +9,8 @@ TYPE
 		FILL_FILLING, (*Fill station is preforming the filling process*)
 		FILL_EXIT_SHUTTLE, (*Fill station is preforming the exit movement*)
 		FILL_DONE, (*Fill station is done with the filling process*)
+		FILL_CHECK_REPEAT,
+		FILL_RESET,
 		FILL_ERROR (*Fill station had an error*)
 		);
 	FillStationFbTyp : 	STRUCT 

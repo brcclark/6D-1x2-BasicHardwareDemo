@@ -2,6 +2,7 @@
 {REDUND_ERROR} FUNCTION_BLOCK AngledMovementFb (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_INPUT
 		Execute : BOOL;
+		Reset : BOOL;
 		Controller : REFERENCE TO McAcp6DControllerType;
 		ShuttleId : USINT;
 		PosStartX : REAL;
@@ -22,6 +23,7 @@ END_FUNCTION_BLOCK
 {REDUND_ERROR} FUNCTION_BLOCK WobbleMovementFb (*TODO: Add your comment here*) (*$GROUP=User,$CAT=User,$GROUPICON=User.png,$CATICON=User.png*)
 	VAR_INPUT
 		Execute : BOOL;
+		Reset : BOOL;
 		Controller : REFERENCE TO McAcp6DControllerType;
 		ShuttleId : USINT;
 		VirtShId : USINT;

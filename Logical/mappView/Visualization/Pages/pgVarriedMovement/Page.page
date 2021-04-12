@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="pgVariedMovement" layoutRefId="layout_Landsacpe">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="cntVariedMovement" areaRefId="AreaContent" backColor="rgba(237, 237, 237, 1)" backGroundGradient="" />
+    <Assignment type="Content" baseContentRefId="cntNav" areaRefId="AreaHeader" backColor="rgba(237, 237, 237, 0)" backGroundGradient="" />
+    <Assignment type="Content" baseContentRefId="cntInfo" areaRefId="AreaInfo" backColor="rgba(237, 237, 237, 1)" backGroundGradient="" />
+  </Assignments>
+</pdef:Page>

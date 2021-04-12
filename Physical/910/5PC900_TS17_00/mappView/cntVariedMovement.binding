@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="cntVariedMovement_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[0].Par.ShuttleIdx" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="ddbShuttleId" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[0].Cmd.Process" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="pbRunProcessSt1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[0].Cmd.Reset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="pbResetProcessSt1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[0].Par.StationType" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="ddbMovementTypeSt1" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[0].Par.RepeatCount" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="niRepeatCount1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[0].Par.RepeatForever" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="tsRepeatForeverSt1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[1].Par.RepeatCount" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="niRepeatCount2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[1].Par.StationType" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="ddbMovementTypeSt2" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[1].Par.ShuttleIdx" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="ddbShuttleId1" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[1].Par.RepeatForever" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="tsRepeatForeverSt2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[1].Cmd.Process" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="pbRunProcessSt2" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:gVariedMoveDemoIf[1].Cmd.Reset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="cntVariedMovement" widgetRefId="pbResetProcessSt2" attribute="value" />
+		</Binding>
+		
+	</Bindings>
+</BindingsSet>

@@ -32,6 +32,7 @@ PROGRAM _CYCLIC
 				gProcessInfoIf.Cmd.Enable := TRUE;
 				gVariedMoveDemoIf[0].Cmd.Enable := TRUE;
 				gVariedMoveDemoIf[1].Cmd.Enable := TRUE;
+				CmdShEnable(TRUE, ADR(gShuttleIf),gMainIf.Cfg.ShuttleCount);
 				
 				state := MAIN_STARTING;
 			ELSIF NOT gMainIf.Cmd.Power THEN
