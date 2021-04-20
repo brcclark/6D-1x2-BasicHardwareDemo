@@ -9,9 +9,9 @@ FUNCTION_BLOCK AngledMovementFb
 				Active := TRUE;
 				Internal.ShPos[axPosX] := PosStartX - 0.026;
 				Internal.ShPos[axPosY] := PosStartY + 0.026;
-				Internal.ShPos[axPosZ] := 0.004;
-				Internal.ShPos[axPosRX] := 0.025;
-				Internal.ShPos[axPosRY] := 0.025;
+				Internal.ShPos[axPosZ] := 0.003;
+				Internal.ShPos[axPosRX] := 0.02;
+				Internal.ShPos[axPosRY] := 0.02;
 				
 				Internal.Fbs.Move6DFb.Controller := ADR(Controller);
 				Internal.Fbs.Move6DFb.ShuttleID := ShuttleId;
@@ -42,8 +42,8 @@ FUNCTION_BLOCK AngledMovementFb
 		ANG_INT_MOV_1:
 			Internal.ShPos[axPosX] := Internal.ShPos[axPosX];
 			Internal.ShPos[axPosY] := Internal.ShPos[axPosY] - 0.052;
-			Internal.ShPos[axPosRX] := -0.025;
-			Internal.ShPos[axPosRY] := 0.025;
+			Internal.ShPos[axPosRX] := -0.02;
+			Internal.ShPos[axPosRY] := 0.02;
 			
 			Internal.Fbs.Move6DFb.Position := Internal.ShPos;
 			Internal.Fbs.Move6DFb.Execute := TRUE;
@@ -52,8 +52,8 @@ FUNCTION_BLOCK AngledMovementFb
 		ANG_INT_MOV_2:
 			Internal.ShPos[axPosX] := Internal.ShPos[axPosX] + 0.052;
 			Internal.ShPos[axPosY] := Internal.ShPos[axPosY];
-			Internal.ShPos[axPosRX] := -0.025;
-			Internal.ShPos[axPosRY] := -0.025;
+			Internal.ShPos[axPosRX] := -0.02;
+			Internal.ShPos[axPosRY] := -0.02;
 			
 			Internal.Fbs.Move6DFb.Position := Internal.ShPos;
 			Internal.Fbs.Move6DFb.Execute := TRUE;
@@ -62,8 +62,8 @@ FUNCTION_BLOCK AngledMovementFb
 		ANG_INT_MOV_3:
 			Internal.ShPos[axPosX] := Internal.ShPos[axPosX];
 			Internal.ShPos[axPosY] := Internal.ShPos[axPosY] + 0.052;
-			Internal.ShPos[axPosRX] := 0.025;
-			Internal.ShPos[axPosRY] := -0.025;
+			Internal.ShPos[axPosRX] := 0.02;
+			Internal.ShPos[axPosRY] := -0.02;
 			
 			Internal.Fbs.Move6DFb.Position := Internal.ShPos;
 			Internal.Fbs.Move6DFb.Execute := TRUE;
@@ -72,8 +72,8 @@ FUNCTION_BLOCK AngledMovementFb
 		ANG_INT_MOV_4:
 			Internal.ShPos[axPosX] := Internal.ShPos[axPosX] - 0.052;
 			Internal.ShPos[axPosY] := Internal.ShPos[axPosY];
-			Internal.ShPos[axPosRX] := 0.025;
-			Internal.ShPos[axPosRY] := 0.025;
+			Internal.ShPos[axPosRX] := 0.02;
+			Internal.ShPos[axPosRY] := 0.02;
 			
 			Internal.Fbs.Move6DFb.Position := Internal.ShPos;
 			Internal.Fbs.Move6DFb.Execute := TRUE;

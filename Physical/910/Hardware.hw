@@ -42,6 +42,7 @@
     <Connector Name="IF3">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />
       <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="ActivateSnmp" Value="2" />
     </Connector>
     <Connector Name="IF4">
       <Parameter ID="AssignedOperatingSystem" Value="ARemb" />

@@ -16,7 +16,7 @@ PROGRAM _INIT
 	stationPars.Accel := 10.0;
 	
 	stationFbs[0].St1Fb.LinearVel := 0.5;// m/s
-	stationFbs[0].St1Fb.ShortAxisRotVel := 1.0;//rad/s
+	stationFbs[0].St1Fb.ShortAxisRotVel := 0.5;//rad/s
 	stationFbs[1].St1Fb.LinearVel := 0.5;// m/s
-	stationFbs[1].St1Fb.ShortAxisRotVel := 1.0;//rad/s
+	stationFbs[1].St1Fb.ShortAxisRotVel := 0.5;//rad/s
 END_PROGRAM

@@ -4,7 +4,7 @@ VAR
 	taskName : STRING[80];
 	stationPars : {REDUND_UNREPLICABLE} FillStationParsTyp;
 	station : FillStationEnum;
-	macroPatternCounter : USINT;
+	macroPatternCounter : ARRAY[0..1] OF USINT;
 	repeatCounter : USINT;
 	i : INT;
 END_VAR

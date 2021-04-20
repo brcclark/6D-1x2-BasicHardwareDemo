@@ -19,10 +19,10 @@ ACTION SetupStationActions:
 			stationFbs[i].St3Fb.PlanetMacroID := DINT_TO_USINT(142);
 			
 			stationFbs[i].St3Fb.ShuttleId := gShuttleIf[gVariedMoveDemoIf[i].Par.ShuttleIdx].Cfg.ShuttleId;
-			stationFbs[i].St3Fb.VirtShId := 100;
+			stationFbs[i].St3Fb.VirtShId := 100 + INT_TO_USINT(i);
 			stationFbs[i].St3Fb.Execute := TRUE;
-			
-			CASE macroPatternCounter OF
+			stationFbs[i].St3Fb.SunMacroID := DINT_TO_USINT(141);
+			CASE macroPatternCounter[i] OF
 				0:
 					stationFbs[i].St3Fb.SunMacroID := DINT_TO_USINT(141);
 				1:

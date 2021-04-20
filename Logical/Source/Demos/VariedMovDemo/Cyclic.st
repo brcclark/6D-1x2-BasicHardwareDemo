@@ -52,9 +52,9 @@ PROGRAM _CYCLIC
 							stationFbs[i].St2Fb.Execute := FALSE;
 						ST3:
 							stationFbs[i].St3Fb.Execute := FALSE;
-							macroPatternCounter := macroPatternCounter + 1;
-							IF macroPatternCounter = 2 THEN
-								macroPatternCounter := 0;
+							macroPatternCounter[i] := macroPatternCounter[i]+ 1;
+							IF macroPatternCounter[i] = 2 THEN
+								macroPatternCounter[i] := 0;
 							END_IF
 						ST4:
 							stationFbs[i].St4Fb.Execute := FALSE;
@@ -70,7 +70,7 @@ PROGRAM _CYCLIC
 				IF NOT gVariedMoveDemoIf[i].Cmd.Enable THEN
 					gVariedMoveDemoIf[i].Sts.Enabled := FALSE;
 					gVariedMoveDemoIf[i].Sts.ReadyForNewShuttle := FALSE;
-					macroPatternCounter := 0;
+					macroPatternCounter[i] := 0;
 				
 					state[i] := FILL_RESET;
 				ELSE 
