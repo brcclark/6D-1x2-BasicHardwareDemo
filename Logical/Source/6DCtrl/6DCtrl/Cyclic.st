@@ -60,11 +60,13 @@ PROGRAM _CYCLIC
 				
 				//This is hard coded for 2 axes to get the X position cyclically for the two FBs
 				Fbs.CfgReadCyclicPos.Controller := ADR(gMcAcp6DController);
-				Fbs.CfgReadCyclicPos.NumberOfChannels := 1;
+				Fbs.CfgReadCyclicPos.NumberOfChannels := 2;
 				Fbs.CfgReadCyclicPos.ChannelID[0] := 1;
+				Fbs.CfgReadCyclicPos.ChannelID[1] := 2;
 				Fbs.CfgReadCyclicPos.FeedbackMode[0] := mcACP6D_READ_CYCLIC_POSITION;
+				Fbs.CfgReadCyclicPos.FeedbackMode[1] := mcACP6D_READ_CYCLIC_FORCE;
 				Fbs.CfgReadCyclicPos.ShuttleID[0] := 1;
-				Fbs.CfgReadCyclicPos.ShuttleID[1] := 2;
+				Fbs.CfgReadCyclicPos.ShuttleID[1] := 1;
 				Fbs.CfgReadCyclicPos.Execute := TRUE;
 				
 				state := ACP6D_CFG_CYCLIC_CHANNEL;
@@ -155,4 +157,10 @@ PROGRAM _CYCLIC
 	gAcp6DCtrlIf.Status.Error := state = ACP6D_ERROR;
 	gAcp6DCtrlIf.Status.ReadyToPowerOn := Fbs.SysReadStateFb.Valid AND Fbs.SysReadStateFb.State = mcACP6D_STATE_INACTIVE;
 
+//	IF filterTest THEN
+//		KalmanFb.SystemInput := gShuttleIf[0].Status.ShuttleInfo.Force.Value.Fz;
+//	END_IF
+//	
+//	KalmanFb.SystemOutput := gShuttleIf[0].Status.ShuttleInfo.Force.Value.Fz;
+//	KalmanFb();
 END_PROGRAM

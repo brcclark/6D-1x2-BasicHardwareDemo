@@ -20,7 +20,7 @@
     <Parameter ID="TimerDevice" Value="5LS182.6-1.IF1" />
     <Parameter ID="Cyclic1Duration" Value="1000" />
     <Parameter ID="Cyclic1Tolerance" Value="0" />
-    <Parameter ID="Cyclic2Duration" Value="10000" />
+    <Parameter ID="Cyclic2Duration" Value="5000" />
     <Parameter ID="Cyclic8Duration" Value="2000" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="6DMacro" />

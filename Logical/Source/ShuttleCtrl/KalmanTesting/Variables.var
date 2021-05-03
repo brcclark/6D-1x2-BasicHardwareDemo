@@ -1,0 +1,17 @@
+VAR
+	readCyclicForceFb : MC_BR_ReadCyclicChAxis_Acp6D;
+	weighKalman : WFPredictiveFilter;
+	WeighFb : MC_BR_GetPayload_Acp6D;
+	OutputCovertedToWeight : ARRAY[0..1] OF LREAL;
+	filterTest : BOOL;
+	WeightTest : BOOL;
+	enableFilters : BOOL;
+	state : INT;
+	KalmanFb : ARRAY[0..1] OF MTFilterKalman;
+	ExpectedWeight : REAL;
+	finalWeighKalmanFb : WFPredictiveFilter;
+	Reset : BOOL;
+	rawWeight : REAL;
+	shiftedWeight : REAL;
+	weightValues : WeighTyp;
+END_VAR

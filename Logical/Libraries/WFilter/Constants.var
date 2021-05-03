@@ -1,0 +1,7 @@
+VAR CONSTANT
+	wfERR_NONE : UINT := 0; (*No error on the function block*)
+	wfERR_NULLPOINTER : UINT := 1; (*The buffer points to Null*)
+	wfERR_BUFFER_OVERFLOW : UINT := 2; (*The buffer is too small*)
+	wfERR_ZERO_LENGTH : UINT := 3; (*The sample size is zero*)
+	wfERR_FIT_CALCULATION : UINT := 4; (*Fit could not be calculated*)
+END_VAR

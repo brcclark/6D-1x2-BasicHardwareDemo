@@ -21,9 +21,9 @@ PROGRAM _CYCLIC
 				shFbs[i].ReadCyclicPosY.AxisID := 2;
 				shFbs[i].ReadCyclicPosY.Enable := TRUE;
 				
-				shFbs[i].MovingAvgFb.WindowLength := 5000;
-				shFbs[i].MovingAvgFb.Enable := TRUE;
-				shFbs[i].WeightAvgFb.WindowLength := 5000;
+//				shFbs[i].MovingAvgFb.WindowLength := 5000;
+//				shFbs[i].MovingAvgFb.Enable := TRUE;
+//				shFbs[i].WeightAvgFb.WindowLength := 5000;
 				
 				shState[i] := SH_STARTUP;
 			SH_STARTUP:  //******************************************************************************** Shuttle is in the startup state
@@ -105,17 +105,17 @@ PROGRAM _CYCLIC
 				END_IF
 				
 			SH_LANDED:
-				IF NOT gShuttleIf[i].Cmd.Land THEN
-					shFbs[i].LandCtrl.Level := 1;
-					shFbs[i].LandCtrl.Execute := TRUE;
-					shState[i] := SH_LANDING;
-				ELSIF gShuttleIf[i].Cmd.Weigh THEN
-					shFbs[i].LandCtrl.Level := 1;
-					shFbs[i].LandCtrl.Execute := TRUE;
-					shFbs[i].WeightAvgFb.Enable := TRUE;
-					
-					shState[i] := SH_WEIGHING;
-				END_IF
+//				IF NOT gShuttleIf[i].Cmd.Land THEN
+//					shFbs[i].LandCtrl.Level := 1;
+//					shFbs[i].LandCtrl.Execute := TRUE;
+//					shState[i] := SH_LANDING;
+//				ELSIF gShuttleIf[i].Cmd.Weigh THEN
+//					shFbs[i].LandCtrl.Level := 1;
+//					shFbs[i].LandCtrl.Execute := TRUE;
+//					shFbs[i].WeightAvgFb.Enable := TRUE;
+//					
+//					shState[i] := SH_WEIGHING;
+//				END_IF
 			SH_WEIGHING:
 				//Weigh process
 				(*
@@ -123,7 +123,7 @@ PROGRAM _CYCLIC
 				On Cmd, start Levitate, start capturing force data into filter
 				*)
 				IF NOT gShuttleIf[i].Cmd.Weigh THEN
-					shFbs[i].WeightAvgFb.Enable := FALSE;
+//					shFbs[i].WeightAvgFb.Enable := FALSE;
 					shFbs[i].LandCtrl.Execute := FALSE;
 					gShuttleIf[i].Cmd.Land := FALSE;
 					shState[i] := SH_IDLE;
@@ -139,8 +139,8 @@ PROGRAM _CYCLIC
 		shFbs[i].Stop();
 		shFbs[i].ReadCyclicPosX();
 		shFbs[i].ReadCyclicPosY();
-		shFbs[i].MovingAvgFb();
-		shFbs[i].WeightAvgFb();
+//		shFbs[i].MovingAvgFb();
+//		shFbs[i].WeightAvgFb();
 		
 		IF shFbs[i].ReadCyclicPosX.Valid THEN
 			gShuttleIf[i].Status.CyclicPositionX := shFbs[i].ReadCyclicPosX.Value;
@@ -157,20 +157,20 @@ PROGRAM _CYCLIC
 			gShuttleIf[i].Status.ProductWeight := 0;
 		END_IF
 		
-		IF ResetAvg THEN
-			shFbs[i].MovingAvgFb.Enable := FALSE;
-			IF NOT shFbs[i].MovingAvgFb.Active THEN
-				ResetAvg := FALSE;
-				shFbs[i].MovingAvgFb.Enable := TRUE;
-			END_IF
-		END_IF
-		shFbs[i].MovingAvgFb.In := gShuttleIf[i].Status.ShuttleInfo.Force.Value.Fz / 9.81 * 1000;
-		shFbs[i].WeightAvgFb.In := gShuttleIf[i].Status.ShuttleInfo.Force.Value.Fz / 9.81 * 1000 - gShuttleIf[i].Status.TareWeight + CalibrationValue;
-		gShuttleIf[i].Status.ProductWeight := shFbs[i].WeightAvgFb.Out;
-		IF gShuttleIf[i].Cmd.Tare THEN
-			gShuttleIf[i].Status.TareWeight := shFbs[i].MovingAvgFb.Out;
-			gShuttleIf[i].Cmd.Tare := FALSE;
-		END_IF
+//		IF ResetAvg THEN
+//			shFbs[i].MovingAvgFb.Enable := FALSE;
+//			IF NOT shFbs[i].MovingAvgFb.Active THEN
+//				ResetAvg := FALSE;
+//				shFbs[i].MovingAvgFb.Enable := TRUE;
+//			END_IF
+//		END_IF
+//		shFbs[i].MovingAvgFb.In := gShuttleIf[i].Status.ShuttleInfo.Force.Value.Fz / 9.81 * 1000;
+//		shFbs[i].WeightAvgFb.In := gShuttleIf[i].Status.ShuttleInfo.Force.Value.Fz / 9.81 * 1000 - gShuttleIf[i].Status.TareWeight + CalibrationValue;
+//		gShuttleIf[i].Status.ProductWeight := shFbs[i].WeightAvgFb.Out;
+//		IF gShuttleIf[i].Cmd.Tare THEN
+//			gShuttleIf[i].Status.TareWeight := shFbs[i].MovingAvgFb.Out;
+//			gShuttleIf[i].Cmd.Tare := FALSE;
+//		END_IF
 	END_FOR;
 	pDebugIf ACCESS ADR(gShuttleIf[debugIdx]);
 	pDebugState ACCESS ADR(shState[debugIdx]);

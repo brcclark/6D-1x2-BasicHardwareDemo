@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="0.09.0" SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File Description="Exported data types">Types.typ</File>
+    <File Description="Exported constants">Constants.var</File>
+    <File Description="Exported functions and function blocks">WFilter.fun</File>
+    <File Description="Filter function blocks">filter_fub.c</File>
+    <File Description="Filter functions">filter.c</File>
+    <File Description="Filter headers">filter.h</File>
+    <File>LibWFilter.chm</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="astime" />
+  </Dependencies>
+</Library>

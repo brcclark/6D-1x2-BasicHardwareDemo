@@ -6,5 +6,6 @@
     <Object Type="File" Private="true">ShCtrlGlobalTypes.typ</Object>
     <Object Type="Program" Language="IEC">ShCtrl</Object>
     <Object Type="Program" Language="IEC">Recovery</Object>
+    <Object Type="Program" Language="IEC">KalmanTesting</Object>
   </Objects>
 </Package>
