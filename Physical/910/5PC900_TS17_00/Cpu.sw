@@ -16,6 +16,7 @@
   </TaskClass>
   <TaskClass Name="Cyclic#4">
     <Task Name="Recovery" Source="Source.ShuttleCtrl.Recovery.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="GenMoveDem" Source="Source.Demos.GenMoveDemo.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />

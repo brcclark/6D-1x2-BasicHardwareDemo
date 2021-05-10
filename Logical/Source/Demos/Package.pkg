@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="Program" Language="IEC">MacroDemo</Object>
     <Object Type="Program" Language="IEC">VariedMovDemo</Object>
+    <Object Type="Program" Language="IEC">GenMoveDemo</Object>
   </Objects>
 </Package>
