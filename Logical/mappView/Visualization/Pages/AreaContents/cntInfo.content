@@ -5,5 +5,6 @@
     <Widget xsi:type="widgets.brease.NavigationButton" id="navMain" top="12" left="22" width="106" zIndex="1" pageId="pgMain" text="Main" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="navMacros" top="50" left="22" width="106" zIndex="2" pageId="pgMacro" text="Macros" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="navVariedMoves" top="88" left="22" width="106" zIndex="3" pageId="pgVariedMovement" text="Var Moves" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="navInterlink" top="130" left="22" width="106" zIndex="4" pageId="pgInterlinking" text="Interlink" />
   </Widgets>
 </Content>

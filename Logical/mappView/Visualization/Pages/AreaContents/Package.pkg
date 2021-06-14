@@ -8,5 +8,6 @@
     <Object Type="File">cntMacro.content</Object>
     <Object Type="File">cntNav.content</Object>
     <Object Type="File">cntVariedMovements.content</Object>
+    <Object Type="File">cntInterlinking.content</Object>
   </Objects>
 </Package>

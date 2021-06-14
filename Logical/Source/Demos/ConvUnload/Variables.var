@@ -1,0 +1,5 @@
+VAR
+	state : ConvHandOffStateEnum;
+	interlinkIf : ConvHandOffIfTyp;
+	fbs : HandOffFbsTyp;
+END_VAR

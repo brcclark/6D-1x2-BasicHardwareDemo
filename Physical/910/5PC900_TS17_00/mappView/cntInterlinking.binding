@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="cntInterlinking_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.ZoneID" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="ddbZoneId" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.ZoneMode" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="ddbZoneMode" attribute="selectedIndex" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.ZoneCenterY" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="niCenterY" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.ZoneCenterX" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="niCenterX" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.UnloadingMode" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="ddbUnloadingMode" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.ZoneLength" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="niZoneLength" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.ZoneWidth" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="niZoneWidth" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.MaxShuttleX" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="maxShuttleSizeX" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.MaxShuttleY" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="maxShuttleSizeY" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.Velocity" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="niVelocity" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ZonePars.Accel" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="niAcceleration" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Par.ShuttleID" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="ddbShuttleId" attribute="selectedIndex" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Cmd.Offload" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="pbOffloadShuttle" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::ConvUnload:interlinkIf.Cmd.SetupZone" attribute="value" />
+<Target xsi:type="brease" contentRefId="cntInterlinking" widgetRefId="pbSetupZone" attribute="value" />
+</Binding>
+</Bindings>
+</BindingsSet>

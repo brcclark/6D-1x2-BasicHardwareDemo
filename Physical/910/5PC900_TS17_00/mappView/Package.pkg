@@ -9,5 +9,6 @@
     <Object Type="File">cntMacro.binding</Object>
     <Object Type="File">cntMacro_evntBinding.eventbinding</Object>
     <Object Type="File">cntVariedMovement.binding</Object>
+    <Object Type="File">cntInterlinking.binding</Object>
   </Objects>
 </Package>

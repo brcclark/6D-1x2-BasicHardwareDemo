@@ -4,5 +4,6 @@
     <Widget xsi:type="widgets.brease.Image" id="Image1" top="0" left="-40" width="240" height="760" zIndex="0" image="Media/6D.jpg" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="navMain" top="10" left="14" zIndex="1" pageId="pgMain" text="Main" />
     <Widget xsi:type="widgets.brease.NavigationButton" id="navMacros" top="48" left="14" zIndex="2" pageId="pgMacro" text="Macros" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="navInterlink" top="88" left="14" zIndex="3" pageId="pgInterlinking" text="Interlink" />
   </Widgets>
 </Content>

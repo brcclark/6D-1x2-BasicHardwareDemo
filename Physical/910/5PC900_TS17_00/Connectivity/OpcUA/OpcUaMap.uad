@@ -34,6 +34,9 @@
       <Task Name="MacroDemo">
         <Variable Name="macroDemoIf" AutomaticEnable="True" />
       </Task>
+      <Task Name="ConvUnload">
+        <Variable Name="interlinkIf" AutomaticEnable="True" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

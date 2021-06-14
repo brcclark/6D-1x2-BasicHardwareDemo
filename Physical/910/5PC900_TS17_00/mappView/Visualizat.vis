@@ -5,6 +5,7 @@
 		<Page refId="pgMain"/>
 		<Page refId="pgMacro"/>
 		<Page refId="pgVariedMovement"/>
+		<Page refId="pgInterlinking"/>
 	</Pages>
 	<Navigations>
 		<!--<Navigation refId="" />-->
@@ -13,6 +14,7 @@
 		<BindingsSet refId="cntMain_binding" />
 		<BindingsSet refId="cntMacro_binding" />
 		<BindingsSet refId="cntVariedMovement_binding" />
+		<BindingsSet refId="cntInterlinking_binding" />
 	</BindingsSets>
 	<EventBindingsSets>
 		<EventBindingsSet refId="cnMacro_event_binding" />

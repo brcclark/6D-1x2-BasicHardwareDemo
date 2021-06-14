@@ -4,6 +4,7 @@
   <TaskClass Name="Cyclic#1">
     <Task Name="6DCtrl" Source="Source.6DCtrl.6DCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="ShCtrl" Source="Source.ShuttleCtrl.ShCtrl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="ConvUnload" Source="Source.Demos.ConvUnload.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="KalmanTes1" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2">
@@ -88,6 +89,7 @@
     <LibraryObject Name="MpServer" Source="Libraries.MpServer.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="WFilter" Source="Libraries.WFilter.lby" Memory="UserROM" Language="ANSIC" Debugging="true" />
     <LibraryObject Name="AsBrMath" Source="Libraries.AsBrMath.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpAxis" Source="Libraries.MpAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="asmem" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asio" Source="" Memory="UserROM" Language="Binary" Debugging="true" />

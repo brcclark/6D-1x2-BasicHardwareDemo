@@ -6,5 +6,6 @@
     <Object Type="Package">pgMain</Object>
     <Object Type="Package">pgMacros</Object>
     <Object Type="Package">pgVarriedMovement</Object>
+    <Object Type="Package">pgInterlinking</Object>
   </Objects>
 </Package>
